@@ -34,6 +34,50 @@
             "imageWidth": 76
           }
         }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/funnel-display/FunnelDisplay-ExtraBold.ttf",
+            "./assets/fonts/funnel-display/FunnelDisplay-Bold.ttf",
+            "./assets/fonts/funnel-display/FunnelDisplay-SemiBold.ttf",
+            "./assets/fonts/funnel-display/FunnelDisplay-Medium.ttf",
+            "./assets/fonts/funnel-display/FunnelDisplay-Regular.ttf",
+            "./assets/fonts/funnel-display/FunnelDisplay-Light.ttf",
+            "./assets/fonts/outfit/Outfit-Black.ttf",
+            "./assets/fonts/outfit/Outfit-ExtraBold.ttf",
+            "./assets/fonts/outfit/Outfit-Bold.ttf",
+            "./assets/fonts/outfit/Outfit-SemiBold.ttf",
+            "./assets/fonts/outfit/Outfit-Medium.ttf",
+            "./assets/fonts/outfit/Outfit-Regular.ttf",
+            "./assets/fonts/outfit/Outfit-Light.ttf",
+            "./assets/fonts/outfit/Outfit-ExtraLight.ttf",
+            "./assets/fonts/outfit/Outfit-Thin.ttf"
+          ],
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "Funnel Display",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/funnel-display/FunnelDisplay-Regular.ttf",
+                    "weight": 400
+                  }
+                ]
+              },
+              {
+                "fontFamily": "Outfit",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/outfit/Outfit-Regular.ttf",
+                    "weight": 400
+                  }
+                ]
+              }
+            ]
+          }
+        }
       ]
     ],
     "experiments": {
