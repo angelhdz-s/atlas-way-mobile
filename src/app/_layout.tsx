@@ -8,14 +8,12 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    // Funnel Display
     "funnel-display-300": require("../../assets/fonts/funnel-display/FunnelDisplay-Light.ttf"),
     "funnel-display-400": require("../../assets/fonts/funnel-display/FunnelDisplay-Regular.ttf"),
     "funnel-display-500": require("../../assets/fonts/funnel-display/FunnelDisplay-Medium.ttf"),
     "funnel-display-600": require("../../assets/fonts/funnel-display/FunnelDisplay-SemiBold.ttf"),
     "funnel-display-700": require("../../assets/fonts/funnel-display/FunnelDisplay-Bold.ttf"),
     "funnel-display-800": require("../../assets/fonts/funnel-display/FunnelDisplay-ExtraBold.ttf"),
-    // Outfit
     "outfit-100": require("../../assets/fonts/outfit/Outfit-Thin.ttf"),
     "outfit-200": require("../../assets/fonts/outfit/Outfit-ExtraLight.ttf"),
     "outfit-300": require("../../assets/fonts/outfit/Outfit-Light.ttf"),
