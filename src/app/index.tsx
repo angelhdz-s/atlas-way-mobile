@@ -9,14 +9,7 @@ import { Pressable, View } from "react-native";
 
 export default function Index() {
   return (
-    <PageContainer className="bg-linear-0 from-50% to-100% from-fill-back to-primary">
-      <View className="flex-row items-center justify-between">
-        <Text>angelhdzs15@gmail.com</Text>
-        <View className="flex-row gap-4 items-center">
-          <Bell color={DARK_THEME.fgDefault} />
-          <View className="size-10 bg-fill-back border border-bd-default rounded-full"></View>
-        </View>
-      </View>
+        <LandingStackHeader />
       <PageHeader
         title="Hi, Angel"
         description="Start achieving your fit goals"
