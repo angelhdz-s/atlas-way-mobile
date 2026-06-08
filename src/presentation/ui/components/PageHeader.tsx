@@ -11,7 +11,7 @@ type Props = {
 export function PageHeader({ className, title, description }: Props) {
   return (
     <View className={twMerge("gap-1", className)}>
-      <Text font="funnel-display-600" className="text-3xl text-fg-strong">
+      <Text font="FunnelDisplay SemiBold" className="text-3xl text-fg-strong">
         {title}
       </Text>
       {description && <Text>{description}</Text>}
