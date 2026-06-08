@@ -1,4 +1,21 @@
-export type FontFamilty =
+export type FontFamily =
+  | "FunnelDisplay Light"
+  | "FunnelDisplay Regular"
+  | "FunnelDisplay Medium"
+  | "FunnelDisplay SemiBold"
+  | "FunnelDisplay Bold"
+  | "FunnelDisplay ExtraBold"
+  | "Outfit Thin"
+  | "Outfit ExtraLight"
+  | "Outfit Light"
+  | "Outfit Regular"
+  | "Outfit Medium"
+  | "Outfit SemiBold"
+  | "Outfit Bold"
+  | "Outfit ExtraBold"
+  | "Outfit Black";
+
+export type FontFamilyStyleNames =
   | "funnel-display-300"
   | "funnel-display-400"
   | "funnel-display-500"
