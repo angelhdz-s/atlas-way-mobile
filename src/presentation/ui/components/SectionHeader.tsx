@@ -1,13 +1,16 @@
+import { View } from "react-native";
 import { Text } from "./Text";
 
 type Props = {
   title: string;
+  children?: React.ReactNode;
 };
 
-export function SectionHeader({ title }: Props) {
+export function SectionHeader({ title, children }: Props) {
   return (
-    <Text font="Outfit Medium" className="text-2xl text-fg-default">
-      {title}
-    </Text>
+    <View className="h-8 flex-row items-center">
+      <Text className="flex-1 text-xl text-fg-default">{title}</Text>
+      {children}
+    </View>
   );
 }
