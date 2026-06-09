@@ -24,7 +24,7 @@ export function StreakDay({ text, completed = false }: Props) {
           <IconCheck strokeWidth={2} size={16} className="text-fg-strong" />
         </View>
       ) : (
-        <View className="bg-fill-middle size-5 rounded-full" />
+        <View className="bg-fill-top size-5 rounded-full" />
       )}
     </View>
   );
