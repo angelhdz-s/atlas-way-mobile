@@ -1,5 +1,11 @@
+import {
+  IconHome,
+  IconTrophy,
+} from "@/presentation/modules/icon/ui/components/Icons";
+import { getFont } from "@/presentation/utils/font.utils";
+import { DARK_THEME } from "@/styles";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -38,7 +44,53 @@ export default function RootLayout() {
 
   return (
     <SafeAreaProvider>
-      <Stack screenOptions={{ headerShown: false }} />
+      <Tabs
+        screenOptions={{
+          tabBarStyle: {
+            backgroundColor: DARK_THEME.fillMiddle,
+            borderColor: DARK_THEME.fillMiddle,
+            borderRadius: 32,
+            marginBottom: 16,
+            borderTopWidth: 0,
+            elevation: 0,
+            shadowOpacity: 0,
+          },
+          tabBarLabelStyle: {
+            fontFamily: getFont("Outfit Regular"),
+          },
+          tabBarActiveTintColor: DARK_THEME.fgStrong,
+          tabBarInactiveTintColor: DARK_THEME.fgMuted,
+          animation: "shift",
+          headerStyle: {
+            backgroundColor: DARK_THEME.fillBack,
+          },
+          headerTitleStyle: {
+            color: DARK_THEME.fgStrong,
+            fontFamily: getFont("Outfit Regular"),
+            fontWeight: "400",
+          },
+        }}
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "Home",
+            headerShown: false,
+            tabBarIcon: ({ size, color }) => (
+              <IconHome strokeWidth={1.5} size={size} color={color} />
+            ),
+          }}
+        />
+        <Tabs.Screen
+          name="plan"
+          options={{
+            title: "Plan",
+            tabBarIcon: ({ size, color }) => (
+              <IconTrophy strokeWidth={1.5} size={size} color={color} />
+            ),
+          }}
+        />
+      </Tabs>
     </SafeAreaProvider>
   );
 }
