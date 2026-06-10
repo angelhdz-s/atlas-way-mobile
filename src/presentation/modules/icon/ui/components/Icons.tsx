@@ -1,11 +1,14 @@
 import {
     ArrowRight,
     Calendar,
+    ChartSpline,
     Check,
     ClipboardList,
     Dumbbell,
     Flame,
+    Home,
     Route,
+    Trophy,
     Weight,
 } from "lucide-react-native";
 import { withUniwind } from "uniwind";
@@ -18,5 +21,8 @@ export const IconFlame = withUniwind(Flame);
 export const IconRoute = withUniwind(Route);
 export const IconClipboardList = withUniwind(ClipboardList);
 export const IconCalendar = withUniwind(Calendar);
+export const IconHome = withUniwind(Home);
+export const IconChartSpline = withUniwind(ChartSpline);
+export const IconTrophy = withUniwind(Trophy);
 
 export type IconType = typeof IconArrowRight;
