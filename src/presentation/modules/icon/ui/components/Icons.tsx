@@ -9,6 +9,8 @@ import {
   Flame,
   Home,
   Route,
+  Search,
+  SlidersHorizontal,
   Trophy,
   Weight,
 } from "lucide-react-native";
@@ -26,5 +28,7 @@ export const IconHome = withUniwind(Home);
 export const IconChartSpline = withUniwind(ChartSpline);
 export const IconTrophy = withUniwind(Trophy);
 export const IconActivity = withUniwind(Activity);
+export const IconSearch = withUniwind(Search);
+export const IconSlidersHorizontal = withUniwind(SlidersHorizontal);
 
 export type IconType = typeof IconArrowRight;
