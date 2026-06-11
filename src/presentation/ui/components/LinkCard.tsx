@@ -1,10 +1,10 @@
 import {
-    IconArrowRight,
-    IconType,
+  IconArrowRight,
+  IconType,
 } from "@/presentation/modules/icon/ui/components/Icons";
+import { Text } from "@/presentation/ui/components/Text";
 import { View } from "react-native";
 import { twMerge } from "tailwind-merge";
-import { Text } from "./Text";
 
 type Props = {
   className?: string;

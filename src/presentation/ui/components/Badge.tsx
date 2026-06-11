@@ -1,6 +1,6 @@
+import { Text } from "@/presentation/ui/components/Text";
 import { View } from "react-native";
 import { twMerge } from "tailwind-merge";
-import { Text } from "./Text";
 
 type Variant = "default" | "subtle" | "success" | "info" | "danger";
 
@@ -23,7 +23,7 @@ export function Badge({ className, text, variant = "default" }: Props) {
   return (
     <View
       className={twMerge(
-        "px-1.5 text-success rounded-full bg-fill-base",
+        "px-1.5 text-success rounded-full bg-fill-top",
         className,
       )}
     >

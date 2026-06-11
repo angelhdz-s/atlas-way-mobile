@@ -23,7 +23,7 @@ export default function Index() {
   return (
     <View className="flex-1 relative bg-fill-back">
       <View>
-        <PageContainer className="relative bg-fill-back">
+        <PageContainer className="relative bg-fill-back" noHeader>
           <View className="absolute w-[110%] h-86 z-0 -top-20 -left-4 mx-auto bg-linear-180 from-60% to-150% from-primary to-primary-dark" />
           <LandingStackHeader />
           <PageHeader

@@ -6,9 +6,6 @@ export default function Layout() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: {
-          backgroundColor: DARK_THEME.fillBack,
-        },
         headerTitleStyle: {
           color: DARK_THEME.fgStrong,
           fontFamily: getFont("Outfit Regular"),
@@ -20,6 +17,7 @@ export default function Layout() {
         name="index"
         options={{
           title: "Plan",
+          headerShown: false,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
@@ -28,7 +26,8 @@ export default function Layout() {
       <Stack.Screen
         name="routines"
         options={{
-          title: "Routines",
+          title: "Your Routines",
+          headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
@@ -37,7 +36,8 @@ export default function Layout() {
       <Stack.Screen
         name="sessions"
         options={{
-          title: "Sessions",
+          title: "Your Sessions",
+          headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
@@ -46,7 +46,8 @@ export default function Layout() {
       <Stack.Screen
         name="exercises"
         options={{
-          title: "Exercises",
+          title: "Your Exercises",
+          headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },

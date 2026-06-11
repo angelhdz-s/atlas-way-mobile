@@ -1,5 +1,5 @@
+import { Text } from "@/presentation/ui/components/Text";
 import { View } from "react-native";
-import { Text } from "./Text";
 
 type Props = {
   title: string;

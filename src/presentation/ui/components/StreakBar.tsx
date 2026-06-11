@@ -1,9 +1,9 @@
 import { StreakDay } from "@/presentation/modules/streak/ui/components/StreakDay";
+import { Text } from "@/presentation/ui/components/Text";
 import { Flame } from "lucide-react-native";
 import { View } from "react-native";
 import { twMerge } from "tailwind-merge";
 import { withUniwind } from "uniwind";
-import { Text } from "./Text";
 
 type Props = {
   className?: string;
