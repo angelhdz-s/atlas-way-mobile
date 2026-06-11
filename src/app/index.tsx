@@ -21,78 +21,84 @@ import { twMerge } from "tailwind-merge";
 
 export default function Index() {
   return (
-    <View className="relative bg-fill-back">
-      <PageContainer className="relative">
-        <View className="absolute w-[110%] h-76 z-0 -top-10 -left-4 mx-auto bg-linear-180 from-40% to-100% from-primary to-primary-dark" />
-        <LandingStackHeader />
-        <PageHeader
-          title="Hi, Angel"
-          description="Start achieving your fit goals"
-        />
+    <View className="flex-1 relative bg-fill-back">
+      <View>
+        <PageContainer className="relative bg-fill-back">
+          <View className="absolute w-[110%] h-86 z-0 -top-20 -left-4 mx-auto bg-linear-180 from-60% to-150% from-primary to-primary-dark" />
+          <LandingStackHeader />
+          <PageHeader
+            title="Hi, Angel"
+            description="Start achieving your fit goals"
+          />
 
-        <StreakBar className="w-fit self-center" />
+          <StreakBar className="w-fit self-center" />
 
-        <Link asChild href={"/tracking"}>
-          <Pressable className="bg-primary rounded-3xl">
-            {({ pressed }) => (
-              <TrackingCard className={twMerge(pressed && "opacity-50")} />
-            )}
-          </Pressable>
-        </Link>
+          <Link asChild href={"/plan"} push>
+            <Pressable className="bg-primary rounded-3xl">
+              {({ pressed }) => (
+                <TrackingCard className={twMerge(pressed && "opacity-50")} />
+              )}
+            </Pressable>
+          </Link>
 
-        <View className="gap-4">
-          <SectionHeader title="Your Performance">
-            <Text className="text-fg-strong">See More</Text>
-          </SectionHeader>
-          <View className="gap-2">
-            <LinkBar title="Weight" badge="+20% this month" Icon={IconWeight} />
-            <LinkBar
-              title="Sessions Done"
-              badge="100% this month"
-              Icon={IconFlame}
-            />
-            <LinkBar
-              title="Weight"
-              badge="+20% this month"
-              Icon={IconDumbbell}
-            />
-          </View>
-        </View>
-
-        <View className="gap-4">
-          <SectionHeader title="Your Plan" />
-          <View className="gap-2">
-            <View className="justify-between flex-row gap-2">
-              <LinkCard
-                title="Routines"
-                description="Organization of your sessions"
-                Icon={IconRoute}
-                className="w-[49%]"
+          <View className="gap-4">
+            <SectionHeader title="Your Performance">
+              <Text className="text-fg-strong">See More</Text>
+            </SectionHeader>
+            <View className="gap-2">
+              <LinkBar
+                title="Weight"
+                badge="+20% this month"
+                Icon={IconWeight}
               />
-              <LinkCard
-                title="Sessions"
-                description="Exercise organization of a training day"
-                Icon={IconClipboardList}
-                className="w-[49%]"
+              <LinkBar
+                title="Sessions Done"
+                badge="100% this month"
+                Icon={IconFlame}
               />
-            </View>
-            <View className="justify-between flex-row gap-2">
-              <LinkCard
-                title="Exercises"
-                description="Exercises based on muscles you want to train"
+              <LinkBar
+                title="Weight"
+                badge="+20% this month"
                 Icon={IconDumbbell}
-                className="w-[49%]"
-              />
-              <LinkCard
-                title="Calendar"
-                description="Organization of your sessions"
-                Icon={IconCalendar}
-                className="w-[49%]"
               />
             </View>
           </View>
-        </View>
-      </PageContainer>
+
+          <View className="gap-4">
+            <SectionHeader title="Your Plan" />
+            <View className="gap-2">
+              <View className="justify-between flex-row gap-2">
+                <LinkCard
+                  title="Routines"
+                  description="Organization of your sessions"
+                  Icon={IconRoute}
+                  className="w-[49%]"
+                />
+                <LinkCard
+                  title="Sessions"
+                  description="Exercise organization of a training day"
+                  Icon={IconClipboardList}
+                  className="w-[49%]"
+                />
+              </View>
+              <View className="justify-between flex-row gap-2">
+                <LinkCard
+                  title="Exercises"
+                  description="Exercises based on muscles you want to train"
+                  Icon={IconDumbbell}
+                  className="w-[49%]"
+                />
+                <LinkCard
+                  title="Calendar"
+                  description="Organization of your sessions"
+                  Icon={IconCalendar}
+                  className="w-[49%]"
+                />
+              </View>
+            </View>
+          </View>
+        </PageContainer>
+      </View>
     </View>
   );
 }
