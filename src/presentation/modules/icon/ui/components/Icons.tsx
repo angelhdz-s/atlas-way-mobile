@@ -1,4 +1,5 @@
 import {
+    Activity,
     ArrowRight,
     Calendar,
     ChartSpline,
@@ -24,5 +25,6 @@ export const IconCalendar = withUniwind(Calendar);
 export const IconHome = withUniwind(Home);
 export const IconChartSpline = withUniwind(ChartSpline);
 export const IconTrophy = withUniwind(Trophy);
+export const IconActivity = withUniwind(Activity);
 
 export type IconType = typeof IconArrowRight;
