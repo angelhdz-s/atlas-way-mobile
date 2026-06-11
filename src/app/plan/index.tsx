@@ -26,7 +26,7 @@ export default function Plan() {
             title="Routines"
             Icon={IconRoute}
             description="Organization of your sessions"
-            href="/plan/exercises"
+            href="/plan/routines"
             badge="3 routines"
           />
           <PlanCardLink
