@@ -6,13 +6,16 @@ import {
   Check,
   ClipboardList,
   Dumbbell,
+  Ellipsis,
   Flame,
   Home,
   Route,
+  Search,
+  SlidersHorizontal,
   Trophy,
   Weight,
-} from "lucide-react-native";
-import { withUniwind } from "uniwind";
+} from 'lucide-react-native';
+import { withUniwind } from 'uniwind';
 
 export const IconArrowRight = withUniwind(ArrowRight);
 export const IconDumbbell = withUniwind(Dumbbell);
@@ -26,5 +29,8 @@ export const IconHome = withUniwind(Home);
 export const IconChartSpline = withUniwind(ChartSpline);
 export const IconTrophy = withUniwind(Trophy);
 export const IconActivity = withUniwind(Activity);
+export const IconSearch = withUniwind(Search);
+export const IconSlidersHorizontal = withUniwind(SlidersHorizontal);
+export const IconEllipsis = withUniwind(Ellipsis);
 
 export type IconType = typeof IconArrowRight;

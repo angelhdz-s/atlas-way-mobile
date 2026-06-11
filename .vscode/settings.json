@@ -36,5 +36,6 @@
   ],
   "tailwindCSS.classFunctions": ["useResolveClassNames"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "files.eol": "\n"
 }
