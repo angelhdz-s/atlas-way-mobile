@@ -1,99 +1,104 @@
-import { StreakDay } from "@/presentation/modules/streak/ui/components/StreakDay";
+import {
+  IconCalendar,
+  IconClipboardList,
+  IconDumbbell,
+  IconFlame,
+  IconRoute,
+  IconWeight,
+} from "@/presentation/modules/icon/ui/components/Icons";
+import { LandingStackHeader } from "@/presentation/ui/components/LandingStackHeader";
+import { LinkBar } from "@/presentation/ui/components/LinkBar";
+import { LinkCard } from "@/presentation/ui/components/LinkCard";
 import { PageContainer } from "@/presentation/ui/components/PageContainer";
 import { PageHeader } from "@/presentation/ui/components/PageHeader";
 import { SectionHeader } from "@/presentation/ui/components/SectionHeader";
+import { StreakBar } from "@/presentation/ui/components/StreakBar";
 import { Text } from "@/presentation/ui/components/Text";
-import { DARK_THEME } from "@/styles";
-import { Bell, Dumbbell, Flame } from "lucide-react-native";
+import { TrackingCard } from "@/presentation/ui/components/TrackingCard";
+import { Link } from "expo-router";
 import { Pressable, View } from "react-native";
+import { twMerge } from "tailwind-merge";
 
 export default function Index() {
   return (
-    <PageContainer className="bg-linear-0 from-50% to-100% from-fill-back to-primary">
-      <View className="flex-row items-center justify-between">
-        <Text>angelhdzs15@gmail.com</Text>
-        <View className="flex-row gap-4 items-center">
-          <Bell color={DARK_THEME.fgDefault} />
-          <View className="size-10 bg-fill-back border border-bd-default rounded-full"></View>
-        </View>
-      </View>
-      <PageHeader
-        title="Hi, Angel"
-        description="Start achieving your fit goals"
-      />
+    <View className="flex-1 relative bg-fill-back">
+      <View>
+        <PageContainer className="relative bg-fill-back">
+          <View className="absolute w-[110%] h-86 z-0 -top-20 -left-4 mx-auto bg-linear-180 from-60% to-150% from-primary to-primary-dark" />
+          <LandingStackHeader />
+          <PageHeader
+            title="Hi, Angel"
+            description="Start achieving your fit goals"
+          />
 
-      <View className="flex-row gap-2 items-center p-2 bg-fill-base rounded-2xl shadow-2xl shadow-fill-back/20">
-        <View className="relative size-14 aspect-square items-center justify-center bg-fill-middle rounded-xl border border-bd-muted">
-          <View className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <Flame color={DARK_THEME.fgMuted} size={32} strokeWidth={1.5} />
-          </View>
-        </View>
-        <View className="flex-1 flex-row gap-1 pr-2">
-          <StreakDay text="M" completed={true} />
-          <StreakDay text="T" completed={true} />
-          <StreakDay text="W" completed={true} />
-          <StreakDay text="T" />
-          <StreakDay text="F" />
-          <StreakDay text="S" />
-          <StreakDay text="S" />
-        </View>
-      </View>
+          <StreakBar className="w-fit self-center" />
 
-      <View className="relative h-48 w-full bg-primary shadow-2xl shadow-fill-back/50 rounded-3xl p-4">
-        <Dumbbell
-          color={DARK_THEME.fgStrong}
-          strokeWidth={0.3}
-          size={196}
-          style={{
-            position: "absolute",
-            right: 0,
-            top: 0,
-            bottom: 0,
-            marginVertical: "auto",
-            opacity: 0.5,
-          }}
-        />
+          <Link asChild href={"/plan"} push>
+            <Pressable className="bg-primary rounded-3xl">
+              {({ pressed }) => (
+                <TrackingCard className={twMerge(pressed && "opacity-50")} />
+              )}
+            </Pressable>
+          </Link>
 
-        <View className="flex-1">
-          <View className="flex-row gap-4 items-center">
-            <View className="size-12 bg-primary-dark rounded-xl justify-center items-center">
-              <Dumbbell
-                color={DARK_THEME.fgStrong}
-                strokeWidth={1.5}
-                size={24}
+          <View className="gap-4">
+            <SectionHeader title="Your Performance">
+              <Text className="text-fg-strong">See More</Text>
+            </SectionHeader>
+            <View className="gap-2">
+              <LinkBar
+                title="Weight"
+                badge="+20% this month"
+                Icon={IconWeight}
+              />
+              <LinkBar
+                title="Sessions Done"
+                badge="100% this month"
+                Icon={IconFlame}
+              />
+              <LinkBar
+                title="Weight"
+                badge="+20% this month"
+                Icon={IconDumbbell}
               />
             </View>
-            <View>
-              <Text
-                font="funnel-display-600"
-                className="tracking-tight leading-none text-xl text-fg-strong"
-              >
-                Push Day
-              </Text>
-              <Text
-                font="funnel-display-300"
-                className="tracking-tight leading-none text-base text-fg-strong"
-              >
-                Tuesday, April 24
-              </Text>
+          </View>
+
+          <View className="gap-4">
+            <SectionHeader title="Your Plan" />
+            <View className="gap-2">
+              <View className="justify-between flex-row gap-2">
+                <LinkCard
+                  title="Routines"
+                  description="Organization of your sessions"
+                  Icon={IconRoute}
+                  className="w-[49%]"
+                />
+                <LinkCard
+                  title="Sessions"
+                  description="Exercise organization of a training day"
+                  Icon={IconClipboardList}
+                  className="w-[49%]"
+                />
+              </View>
+              <View className="justify-between flex-row gap-2">
+                <LinkCard
+                  title="Exercises"
+                  description="Exercises based on muscles you want to train"
+                  Icon={IconDumbbell}
+                  className="w-[49%]"
+                />
+                <LinkCard
+                  title="Calendar"
+                  description="Organization of your sessions"
+                  Icon={IconCalendar}
+                  className="w-[49%]"
+                />
+              </View>
             </View>
           </View>
-        </View>
-
-        <Pressable className="rounded-full h-12 bg-fill-top items-center justify-center w-auto">
-          <Text
-            font="outfit-500"
-            className="tracking-tight text-xl text-fg-strong w-auto"
-          >
-            {"Let's Train"}
-          </Text>
-        </Pressable>
+        </PageContainer>
       </View>
-
-      <View className="mt-4">
-        <SectionHeader title="Your Sessions" />
-        <View></View>
-      </View>
-    </PageContainer>
+    </View>
   );
 }

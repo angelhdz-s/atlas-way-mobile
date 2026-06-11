@@ -1,7 +1,9 @@
+import { CustomTabBar } from "@/presentation/modules/tabs/ui/components/CustomTabBar";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { Tabs } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import "../../global.css";
 
 SplashScreen.preventAutoHideAsync();
@@ -35,5 +37,19 @@ export default function RootLayout() {
     return null;
   }
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <SafeAreaProvider>
+      <Tabs
+        screenOptions={{
+          headerShown: false,
+        }}
+        tabBar={(props) => <CustomTabBar {...props} />}
+      >
+        <Tabs.Screen name="index" options={{ title: "Home" }} />
+        <Tabs.Screen name="progress" options={{ title: "Progress" }} />
+        <Tabs.Screen name="activity" options={{ title: "Activity" }} />
+        <Tabs.Screen name="plan" options={{ title: "Plan" }} />
+      </Tabs>
+    </SafeAreaProvider>
+  );
 }
