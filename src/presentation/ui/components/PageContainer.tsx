@@ -19,7 +19,7 @@ export function PageContainer({
       className={twMerge("size-full px-2 gap-4", className)}
       style={{
         paddingBottom: insets.bottom,
-        paddingTop: noHeader ? insets.top : 0,
+        paddingTop: noHeader ? insets.top + 8 : 8,
       }}
       contentContainerClassName="gap-4 pb-40"
     >
