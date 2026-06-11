@@ -20,6 +20,7 @@ export default function Layout() {
         name="index"
         options={{
           title: "Plan",
+          headerShown: false,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
@@ -29,6 +30,7 @@ export default function Layout() {
         name="routines"
         options={{
           title: "Routines",
+          headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
@@ -38,6 +40,7 @@ export default function Layout() {
         name="sessions"
         options={{
           title: "Sessions",
+          headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
@@ -47,6 +50,7 @@ export default function Layout() {
         name="exercises"
         options={{
           title: "Exercises",
+          headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
