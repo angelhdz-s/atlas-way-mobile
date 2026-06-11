@@ -6,7 +6,7 @@ export default function Plan() {
   return (
     <View>
       <PageContainer>
-        <PageHeader title="Progress" description="Page description" />
+        <PageHeader title="Plan" description="Page description" />
       </PageContainer>
     </View>
   );
