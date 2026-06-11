@@ -19,34 +19,7 @@ export default function Layout() {
       <Stack.Screen
         name="index"
         options={{
-          title: "Plan",
-          contentStyle: {
-            backgroundColor: DARK_THEME.fillBack,
-          },
-        }}
-      />
-      <Stack.Screen
-        name="routines"
-        options={{
-          title: "Routines",
-          contentStyle: {
-            backgroundColor: DARK_THEME.fillBack,
-          },
-        }}
-      />
-      <Stack.Screen
-        name="sessions"
-        options={{
-          title: "Sessions",
-          contentStyle: {
-            backgroundColor: DARK_THEME.fillBack,
-          },
-        }}
-      />
-      <Stack.Screen
-        name="exercises"
-        options={{
-          title: "Exercises",
+          title: "Activity",
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },
