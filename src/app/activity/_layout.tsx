@@ -6,9 +6,7 @@ export default function Layout() {
   return (
     <Stack
       screenOptions={{
-        headerStyle: {
-          backgroundColor: DARK_THEME.fillBack,
-        },
+        headerTransparent: true,
         headerTitleStyle: {
           color: DARK_THEME.fgStrong,
           fontFamily: getFont("Outfit Regular"),
