@@ -14,7 +14,7 @@ export function PageContainer({ children, className, noHeader }: Props) {
     <ScrollView
       className={twMerge("size-full px-2 gap-4", className)}
       style={{ paddingBottom: insets.bottom, paddingTop: insets.top }}
-      contentContainerClassName="gap-4 pb-50"
+      contentContainerClassName="gap-4 pb-40"
     >
       {children}
     </ScrollView>
