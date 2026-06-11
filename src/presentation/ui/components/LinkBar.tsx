@@ -2,10 +2,10 @@ import {
   IconArrowRight,
   IconType,
 } from "@/presentation/modules/icon/ui/components/Icons";
+import { Badge } from "@/presentation/ui/components/Badge";
+import { Text } from "@/presentation/ui/components/Text";
 import { View } from "react-native";
 import { twMerge } from "tailwind-merge";
-import { Badge } from "./Badge";
-import { Text } from "./Text";
 
 type Props = {
   className?: string;

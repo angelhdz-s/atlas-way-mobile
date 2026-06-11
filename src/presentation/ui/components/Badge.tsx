@@ -1,6 +1,6 @@
+import { Text } from "@/presentation/ui/components/Text";
 import { View } from "react-native";
 import { twMerge } from "tailwind-merge";
-import { Text } from "./Text";
 
 type Variant = "default" | "subtle" | "success" | "info" | "danger";
 

@@ -1,4 +1,7 @@
-import { FontFamily, FontFamilyStyleNames } from "../ui/presentation.ui.types";
+import {
+  FontFamily,
+  FontFamilyStyleNames,
+} from "@/presentation/ui/presentation.ui.types";
 
 const Fonts: Record<FontFamily, FontFamilyStyleNames> = {
   "Outfit Thin": "outfit-100",

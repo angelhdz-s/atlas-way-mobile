@@ -5,9 +5,9 @@ import {
   IconTrophy,
   IconType,
 } from "@/presentation/modules/icon/ui/components/Icons";
+import { CustomTab } from "@/presentation/modules/tabs/ui/components/CustomTab";
 import { BottomTabBarProps } from "expo-router/build/react-navigation/bottom-tabs";
 import { View } from "react-native";
-import { CustomTab } from "./CustomTab";
 
 type Props = {
   className?: string;
