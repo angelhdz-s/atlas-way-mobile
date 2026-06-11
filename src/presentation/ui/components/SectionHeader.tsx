@@ -9,7 +9,7 @@ type Props = {
 export function SectionHeader({ title, children }: Props) {
   return (
     <View className="h-8 flex-row items-center">
-      <Text className="flex-1 text-xl text-fg-default">{title}</Text>
+      <Text className="flex-1 text-xl text-fg-strong">{title}</Text>
       {children}
     </View>
   );
