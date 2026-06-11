@@ -8,12 +8,19 @@ type Props = {
   noHeader?: boolean;
 };
 
-export function PageContainer({ children, className, noHeader }: Props) {
+export function PageContainer({
+  children,
+  className,
+  noHeader = false,
+}: Props) {
   const insets = useSafeAreaInsets();
   return (
     <ScrollView
       className={twMerge("size-full px-2 gap-4", className)}
-      style={{ paddingBottom: insets.bottom, paddingTop: insets.top }}
+      style={{
+        paddingBottom: insets.bottom,
+        paddingTop: noHeader ? insets.top : 0,
+      }}
       contentContainerClassName="gap-4 pb-40"
     >
       {children}
