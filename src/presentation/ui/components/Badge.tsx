@@ -23,7 +23,7 @@ export function Badge({ className, text, variant = "default" }: Props) {
   return (
     <View
       className={twMerge(
-        "px-1.5 text-success rounded-full bg-fill-base",
+        "px-1.5 text-success rounded-full bg-fill-top",
         className,
       )}
     >
