@@ -36,7 +36,7 @@ export function CustomTabBar({
         "absolute shrink-0 w-auto bottom-0 left-0 right-0 h-16",
         className,
       )}
-      style={{ marginBottom: insets.bottom }}
+      style={{ marginBottom: insets.bottom + 16 }}
     >
       <View className="self-center shadow-2xl shadow-fill-back-dark border border-bd-muted shrink-0 rounded-full bg-fill-middle flex-row items-center justify-center px-2">
         {state.routes.map((r, i) => {
