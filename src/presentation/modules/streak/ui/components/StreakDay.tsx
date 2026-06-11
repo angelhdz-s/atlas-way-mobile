@@ -1,6 +1,5 @@
 import { Text } from "@/presentation/ui/components/Text";
-import { DARK_THEME } from "@/styles";
-import { Check, Circle } from "lucide-react-native";
+import { Check } from "lucide-react-native";
 import { View } from "react-native";
 import { twMerge } from "tailwind-merge";
 import { withUniwind } from "uniwind";
@@ -11,10 +10,8 @@ type Props = {
 };
 
 const IconCheck = withUniwind(Check);
-const IconCircle = withUniwind(Circle);
 
 export function StreakDay({ text, completed = false }: Props) {
-  const color = completed ? DARK_THEME.fgStrong : DARK_THEME.fillMiddle;
   const className = completed ? "text-fg-default" : "text-fg-default";
   return (
     <View className={twMerge("justify-center items-center rounded-3xl")}>

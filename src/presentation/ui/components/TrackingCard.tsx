@@ -1,6 +1,6 @@
 import { Text } from "@/presentation/ui/components/Text";
 import { ArrowRight, Dumbbell } from "lucide-react-native";
-import { Pressable as RNPressable, View } from "react-native";
+import { View } from "react-native";
 import { twMerge } from "tailwind-merge";
 import { withUniwind } from "uniwind";
 
@@ -10,7 +10,6 @@ type Props = {
 
 const IconDumbbell = withUniwind(Dumbbell);
 const IconArrowRight = withUniwind(ArrowRight);
-const Pressable = withUniwind(RNPressable);
 
 export function TrackingCard({ className }: Props) {
   return (
