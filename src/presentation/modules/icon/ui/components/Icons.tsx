@@ -1,16 +1,16 @@
 import {
-    Activity,
-    ArrowRight,
-    Calendar,
-    ChartSpline,
-    Check,
-    ClipboardList,
-    Dumbbell,
-    Flame,
-    Home,
-    Route,
-    Trophy,
-    Weight,
+  Activity,
+  ArrowRight,
+  Calendar,
+  ChartSpline,
+  Check,
+  ClipboardList,
+  Dumbbell,
+  Flame,
+  Home,
+  Route,
+  Trophy,
+  Weight,
 } from "lucide-react-native";
 import { withUniwind } from "uniwind";
 
