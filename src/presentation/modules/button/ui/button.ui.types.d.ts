@@ -31,5 +31,5 @@ export type ButtonDefaultVariants = ButtonDefaultColorVariantKey &
   ButtonSizeVariantKey;
 
 export type ButtonProps = PressableProps & {
-  variant: ButtonVariantProps;
+  variant?: ButtonVariantProps;
 };

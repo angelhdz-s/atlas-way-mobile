@@ -45,7 +45,7 @@ export function TextIconButton({
 }: Props) {
   const textClassName = buttonTextVariants(buttonProps.variant);
   const iconClassName = buttonIconVariants(buttonProps.variant);
-  const iconFinalSize = getIconSize(iconSize ?? buttonProps.variant.size);
+  const iconFinalSize = getIconSize(iconSize ?? buttonProps.variant?.size);
   return (
     <Button
       className={twMerge(

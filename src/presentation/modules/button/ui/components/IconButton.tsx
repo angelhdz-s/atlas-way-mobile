@@ -18,7 +18,7 @@ type Props = ButtonProps & {
 
 export function IconButton({ Icon, iconSize, ...buttonProps }: Props) {
   const iconClassName = buttonIconVariants(buttonProps.variant);
-  const iconFinalSize = getIconSize(iconSize ?? buttonProps.variant.size);
+  const iconFinalSize = getIconSize(iconSize ?? buttonProps.variant?.size);
   return (
     <Button {...buttonProps} className="aspect-square px-0">
       <Icon
