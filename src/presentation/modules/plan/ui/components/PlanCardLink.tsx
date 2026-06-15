@@ -1,9 +1,10 @@
-import type { IconType } from "@/presentation/modules/icon/ui/components/Icons";
-import { IconArrowRight } from "@/presentation/modules/icon/ui/components/Icons";
-import { Text } from "@/presentation/ui/components/Text";
-import { Link, RoutePath } from "expo-router";
-import { Pressable, View } from "react-native";
-import { twMerge } from "tailwind-merge";
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import type { RoutePath } from 'expo-router';
+import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
+import { Text } from '@/presentation/ui/components/Text';
+import { Link } from 'expo-router';
+import { Pressable, View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   className?: string;
@@ -27,8 +28,8 @@ export function PlanCardLink({
       <Pressable>
         <View
           className={twMerge(
-            "bg-fill-middle p-2 rounded-2xl flex-row",
-            className,
+            'bg-fill-middle p-2 rounded-2xl flex-row',
+            className
           )}
         >
           <View className="size-8 justify-center items-center">

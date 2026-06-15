@@ -1,7 +1,7 @@
-import { IconType } from "@/presentation/modules/icon/ui/components/Icons";
-import { Text } from "@/presentation/ui/components/Text";
-import { Pressable, View } from "react-native";
-import { twMerge } from "tailwind-merge";
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import { Pressable, View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
@@ -24,14 +24,14 @@ export function CustomTab({
     <Pressable onPress={onPress} onLongPress={onLongPress}>
       <View
         className={twMerge(
-          "relative items-center justify-center h-16 w-20",
-          className,
+          'relative items-center justify-center h-16 w-20',
+          className
         )}
       >
         <View
           className={twMerge(
-            "absolute top-0 left-1/2 -translate-x-1/2 h-0.5 rounded-md w-9",
-            active && "bg-fg-strong",
+            'absolute top-0 left-1/2 -translate-x-1/2 h-0.5 rounded-md w-9',
+            active && 'bg-fg-strong'
           )}
         />
         <View>
@@ -39,15 +39,15 @@ export function CustomTab({
             size={16}
             strokeWidth={1.5}
             className={twMerge(
-              "",
-              active ? "text-fg-strong" : "text-fg-subtle",
+              '',
+              active ? 'text-fg-strong' : 'text-fg-subtle'
             )}
           />
         </View>
         <Text
           className={twMerge(
-            "text-sm",
-            active ? "text-fg-strong" : "text-fg-subtle",
+            'text-sm',
+            active ? 'text-fg-strong' : 'text-fg-subtle'
           )}
         >
           {label}
