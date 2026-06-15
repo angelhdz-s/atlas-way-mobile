@@ -1,10 +1,8 @@
-import {
-  IconArrowRight,
-  IconType,
-} from "@/presentation/modules/icon/ui/components/Icons";
-import { Text } from "@/presentation/ui/components/Text";
-import { View } from "react-native";
-import { twMerge } from "tailwind-merge";
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
@@ -17,8 +15,8 @@ export function LinkCard({ className, Icon, title, description }: Props) {
   return (
     <View
       className={twMerge(
-        "bg-fill-middle p-4 gap-2 h-full rounded-2xl",
-        className,
+        'bg-fill-middle p-4 gap-2 h-full rounded-2xl',
+        className
       )}
     >
       <View className="flex-row gap-2 items-center">

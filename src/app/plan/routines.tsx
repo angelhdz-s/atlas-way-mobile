@@ -1,12 +1,18 @@
+import { View } from 'react-native';
+import { IconPlus } from '@/presentation/modules/icon/ui/components/Icons';
+import { BottomActionBar } from '@/presentation/modules/layout/ui/components/BottomActionBar';
 import { FilterBar } from '@/presentation/ui/components/FilterBar';
 import { ListItem } from '@/presentation/ui/components/ListItem';
 import { PageContainer } from '@/presentation/ui/components/PageContainer';
 import { PageHeader } from '@/presentation/ui/components/PageHeader';
-import { View } from 'react-native';
+import { IconButton } from '@/presentation/modules/button/ui/components/IconButton';
 
 export default function Routines() {
   return (
-    <View className="flex-1 bg-fill-back">
+    <View className="relative flex-1 bg-fill-back">
+      <BottomActionBar className="items-end">
+        <IconButton aria-label="Add Routine" Icon={IconPlus} />
+      </BottomActionBar>
       <PageContainer>
         <PageHeader
           title="Your Routines"

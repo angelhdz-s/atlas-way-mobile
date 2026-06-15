@@ -1,11 +1,9 @@
-import {
-  IconArrowRight,
-  IconType,
-} from "@/presentation/modules/icon/ui/components/Icons";
-import { Badge } from "@/presentation/ui/components/Badge";
-import { Text } from "@/presentation/ui/components/Text";
-import { View } from "react-native";
-import { twMerge } from "tailwind-merge";
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
+import { Badge } from '@/presentation/ui/components/Badge';
+import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
@@ -18,8 +16,8 @@ export function LinkBar({ className, Icon, title, badge }: Props) {
   return (
     <View
       className={twMerge(
-        "bg-fill-middle rounded-xl p-1 flex-row items-center h-12",
-        className,
+        'bg-fill-middle rounded-xl p-1 flex-row items-center h-12',
+        className
       )}
     >
       <View className="size-8 justify-center items-center">

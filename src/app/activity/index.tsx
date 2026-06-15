@@ -1,6 +1,6 @@
-import { PageContainer } from "@/presentation/ui/components/PageContainer";
-import { PageHeader } from "@/presentation/ui/components/PageHeader";
-import { View } from "react-native";
+import { View } from 'react-native';
+import { PageContainer } from '@/presentation/ui/components/PageContainer';
+import { PageHeader } from '@/presentation/ui/components/PageHeader';
 
 export default function Activity() {
   return (

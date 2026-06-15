@@ -1,9 +1,10 @@
-import { IconEllipsis } from '@/presentation/modules/icon/ui/components/Icons';
+import type { BadgeVariant } from '@/presentation/ui/components/Badge';
 import { Pressable, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
-import { Badge, BadgeVariant } from './Badge';
-import { CheckButton } from './CheckButton';
-import { Text } from './Text';
+import { IconEllipsis } from '@/presentation/modules/icon/ui/components/Icons';
+import { Badge } from '@/presentation/ui/components/Badge';
+import { CheckButton } from '@/presentation/ui/components/CheckButton';
+import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
