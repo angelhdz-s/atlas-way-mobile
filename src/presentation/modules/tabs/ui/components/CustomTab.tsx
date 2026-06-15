@@ -1,10 +1,10 @@
-import { Pressable, View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
-import { getThemeColors } from '@/styles';
-import { useUniwind } from 'uniwind';
-import { Text } from '@/presentation/ui/components/Text';
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import Animated from 'react-native-reanimated';
+import { Pressable, View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { useUniwind } from 'uniwind';
+import { getThemeColors } from '@/styles';
+import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
