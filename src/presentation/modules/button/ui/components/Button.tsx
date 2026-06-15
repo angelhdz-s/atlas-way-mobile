@@ -1,18 +1,51 @@
 import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
-import { Pressable } from 'react-native';
+import type { GestureResponderEvent } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { useSharedValue, withTiming, Easing } from 'react-native-reanimated';
 import { buttonVariants } from '@/presentation/modules/button/ui/button.ui.variants';
+import { AnimatedButton } from '@/presentation/modules/animated/ui/components/AnimatedButton';
+import { BUTTON_ANIMATION_DURATION } from '@/presentation/modules/button/ui/button.constants';
 
 type Props = ButtonProps;
 
-export function Button({ children, variant, className, ...restProps }: Props) {
+export function Button({
+  children,
+  variant,
+  className,
+  onPressIn,
+  onPressOut,
+  ...restProps
+}: Props) {
+  const scale = useSharedValue(1);
   const buttonVariantClassName = buttonVariants(variant);
+
+  const handleAnimationPressIn = (e: GestureResponderEvent) => {
+    scale.value = withTiming(0.9, {
+      duration: BUTTON_ANIMATION_DURATION,
+      easing: Easing.inOut(Easing.quad),
+    });
+    onPressIn?.(e);
+  };
+
+  const handleAnimationPressOut = (e: GestureResponderEvent) => {
+    scale.value = withTiming(1, {
+      duration: BUTTON_ANIMATION_DURATION,
+      easing: Easing.inOut(Easing.quad),
+    });
+    onPressOut?.(e);
+  };
+
   return (
-    <Pressable
+    <AnimatedButton
       className={twMerge(buttonVariantClassName, className)}
+      onPressIn={handleAnimationPressIn}
+      onPressOut={handleAnimationPressOut}
       {...restProps}
+      style={{
+        transform: [{ scale }],
+      }}
     >
       {children}
-    </Pressable>
+    </AnimatedButton>
   );
 }
