@@ -1,7 +1,10 @@
-import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import { Pressable, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { getThemeColors } from '@/styles';
+import { useUniwind } from 'uniwind';
 import { Text } from '@/presentation/ui/components/Text';
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import Animated from 'react-native-reanimated';
 
 type Props = {
   className?: string;
@@ -20,39 +23,38 @@ export function CustomTab({
   onLongPress,
   onPress,
 }: Props) {
+  const { theme } = useUniwind();
+  const COLORS = getThemeColors(theme === 'dark');
+
   return (
+    // ToDo: bar slide animation
     <Pressable onPress={onPress} onLongPress={onLongPress}>
-      <View
+      <Animated.View
         className={twMerge(
           'relative items-center justify-center h-16 w-20',
           className
         )}
+        style={{
+          transitionProperty: 'opacity',
+          transitionDuration: 300,
+          opacity: active ? 1 : 0.5,
+        }}
       >
-        <View
+        <Animated.View
           className={twMerge(
-            'absolute top-0 left-1/2 -translate-x-1/2 h-0.5 rounded-md w-9',
-            active && 'bg-fg-strong'
+            'absolute top-0 left-1/2 -translate-x-1/2 h-0.5 rounded-md w-9'
           )}
+          style={{
+            transitionProperty: 'backgroundColor',
+            transitionDuration: 200,
+            backgroundColor: active ? COLORS.fgStrong : undefined,
+          }}
         />
         <View>
-          <Icon
-            size={16}
-            strokeWidth={1.5}
-            className={twMerge(
-              '',
-              active ? 'text-fg-strong' : 'text-fg-subtle'
-            )}
-          />
+          <Icon size={16} strokeWidth={1.5} className="text-fg-strong" />
         </View>
-        <Text
-          className={twMerge(
-            'text-sm',
-            active ? 'text-fg-strong' : 'text-fg-subtle'
-          )}
-        >
-          {label}
-        </Text>
-      </View>
+        <Text className="text-sm text-fg-strong">{label}</Text>
+      </Animated.View>
     </Pressable>
   );
 }
