@@ -4,7 +4,7 @@ import { tv } from 'tailwind-variants';
 import { BUTTON_DEFAULT_VARIANTS } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 
 export const buttonVariants = tv({
-  base: 'rounded-full items-center justify-center active:scale-105 flex-row',
+  base: 'rounded-full items-center justify-center flex-row',
   variants: {
     size: {
       sm: 'h-10 px-4',
