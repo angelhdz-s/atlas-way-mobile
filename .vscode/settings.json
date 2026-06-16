@@ -33,8 +33,7 @@
     "ListFooterComponentClassName",
     "ListHeaderComponentClassName",
     // Custom class names
-    "titleClassName",
-    "descriptionClassName"
+    "baseClassName"
   ],
   "tailwindCSS.classFunctions": ["useResolveClassNames", "tv"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
