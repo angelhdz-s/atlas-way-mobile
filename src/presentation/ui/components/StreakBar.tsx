@@ -1,9 +1,9 @@
-import { StreakDay } from "@/presentation/modules/streak/ui/components/StreakDay";
-import { Text } from "@/presentation/ui/components/Text";
-import { Flame } from "lucide-react-native";
-import { View } from "react-native";
-import { twMerge } from "tailwind-merge";
-import { withUniwind } from "uniwind";
+import { StreakDay } from '@/presentation/modules/streak/ui/components/StreakDay';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { Flame } from 'lucide-react-native';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { withUniwind } from 'uniwind';
 
 type Props = {
   className?: string;
@@ -15,8 +15,8 @@ export function StreakBar({ className }: Props) {
   return (
     <View
       className={twMerge(
-        "shrink-0 w-auto flex-row gap-2 items-center bg-fill-base rounded-2xl shadow-2xl shadow-fill-back/20",
-        className,
+        'shrink-0 w-auto flex-row gap-2 items-center bg-fill-base rounded-2xl shadow-2xl shadow-fill-back/20',
+        className
       )}
     >
       <View className="shrink-0 w-auto flex-row gap-2 items-center p-2">
@@ -24,12 +24,12 @@ export function StreakBar({ className }: Props) {
           <IconFlame strokeWidth={1.5} size={20} className="text-fg-default" />
         </View>
         <View className="">
-          <Text className="leading-none" font="Outfit Medium">
+          <AppText className="leading-none" font="Outfit Medium">
             54
-          </Text>
-          <Text className="leading-none text-sm" font="Outfit Light">
+          </AppText>
+          <AppText className="leading-none text-sm" font="Outfit Light">
             days
-          </Text>
+          </AppText>
         </View>
       </View>
       <View className="w-px h-8 bg-bd-default"></View>

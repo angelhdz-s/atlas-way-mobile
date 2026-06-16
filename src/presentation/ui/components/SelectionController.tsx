@@ -1,7 +1,7 @@
+import { AppText } from '@/presentation/ui/components/AppText';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 import { CheckButton } from './CheckButton';
-import { Text } from './Text';
 
 type Props = {
   className?: string;
@@ -18,7 +18,7 @@ export function SelectionController({
 }: Props) {
   return (
     <View className={twMerge('flex-row px-2 h-10 items-center', className)}>
-      <Text className="flex-1">{`${itemsSelected} elements selected`}</Text>
+      <AppText className="flex-1">{`${itemsSelected} elements selected`}</AppText>
       <CheckButton checked={allSelected} />
     </View>
   );

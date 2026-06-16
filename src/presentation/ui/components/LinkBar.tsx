@@ -1,9 +1,9 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { Badge } from '@/presentation/ui/components/Badge';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
-import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
-import { Badge } from '@/presentation/ui/components/Badge';
-import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
@@ -24,7 +24,7 @@ export function LinkBar({ className, Icon, title, badge }: Props) {
         <Icon size={16} className="text-fg-default" />
       </View>
       <View className="flex-1 flex-row gap-2">
-        <Text>Weight</Text>
+        <AppText>Weight</AppText>
         {badge && <Badge text={badge} />}
       </View>
       <View className="size-8 items-center justify-center">

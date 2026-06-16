@@ -1,8 +1,8 @@
-import { Text } from "@/presentation/ui/components/Text";
-import { ArrowRight, Dumbbell } from "lucide-react-native";
-import { View } from "react-native";
-import { twMerge } from "tailwind-merge";
-import { withUniwind } from "uniwind";
+import { AppText } from '@/presentation/ui/components/AppText';
+import { ArrowRight, Dumbbell } from 'lucide-react-native';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { withUniwind } from 'uniwind';
 
 type Props = {
   className?: string;
@@ -13,10 +13,10 @@ const IconArrowRight = withUniwind(ArrowRight);
 
 export function TrackingCard({ className }: Props) {
   return (
-    <View className={twMerge("bg-primary rounded-[20px] p-4 gap-2", className)}>
+    <View className={twMerge('bg-primary rounded-[20px] p-4 gap-2', className)}>
       <View className="flex-row">
-        <Text className="flex-1 text-sm">Today</Text>
-        <Text className="text-sm">May 27, 2026</Text>
+        <AppText className="flex-1 text-sm text-fg-default-dark">Today</AppText>
+        <AppText className="text-sm text-fg-default-dark">May 27, 2026</AppText>
       </View>
       <View className="flex-row items-center">
         <View className="flex-row items-center flex-1 gap-2">
@@ -24,21 +24,23 @@ export function TrackingCard({ className }: Props) {
             <IconDumbbell
               size={20}
               strokeWidth={1.5}
-              className="text-fg-strong"
+              className="text-fg-strong-dark"
             />
           </View>
           <View>
-            <Text className="text-sm leading-tight">Push, Pull, Legs</Text>
-            <Text
-              className="text-lg leading-tight text-fg-strong"
+            <AppText className="text-sm leading-tight text-fg-default-dark">
+              Push, Pull, Legs
+            </AppText>
+            <AppText
+              className="text-lg leading-tight text-fg-strong-dark"
               font="FunnelDisplay Bold"
             >
               Push Day
-            </Text>
+            </AppText>
           </View>
         </View>
         <View className="size-8">
-          <IconArrowRight size={24} className="text-fg-strong" />
+          <IconArrowRight size={24} className="text-fg-strong-dark" />
         </View>
       </View>
     </View>

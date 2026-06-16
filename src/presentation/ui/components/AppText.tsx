@@ -12,30 +12,28 @@ type Props = TextProps & {
 };
 
 export function AppText({
-  className,
-  font,
   lockedTheme,
-  children,
   colors = {
     dark: DARK_THEME.fgDefault,
     light: LIGHT_THEME.fgStrong,
   },
+  children,
+  ...restProps
 }: Props) {
   if (lockedTheme !== undefined)
     return (
       <Text
-        font={font}
-        className={className}
         style={{
           color: lockedTheme === 'dark' ? colors.dark : colors.light,
         }}
+        {...restProps}
       >
         {children}
       </Text>
     );
 
   return (
-    <AnimatedColorText font={font} className={className} colors={colors}>
+    <AnimatedColorText colors={colors} {...restProps}>
       {children}
     </AnimatedColorText>
   );

@@ -1,10 +1,10 @@
-import type { BadgeVariant } from '@/presentation/ui/components/Badge';
-import { Pressable, View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
 import { IconEllipsis } from '@/presentation/modules/icon/ui/components/Icons';
+import { AppText } from '@/presentation/ui/components/AppText';
+import type { BadgeVariant } from '@/presentation/ui/components/Badge';
 import { Badge } from '@/presentation/ui/components/Badge';
 import { CheckButton } from '@/presentation/ui/components/CheckButton';
-import { Text } from '@/presentation/ui/components/Text';
+import { Pressable, View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   className?: string;
@@ -50,7 +50,7 @@ export function ListItem({
     >
       <View className="flex-1 overflow-hidden">
         <View className="flex-row gap-2">
-          <Text className="text-fg-strong">{title}</Text>
+          <AppText className="text-fg-strong">{title}</AppText>
           {badge && (
             <Badge
               className="shrink-0"
@@ -60,18 +60,18 @@ export function ListItem({
           )}
         </View>
         {description && (
-          <Text
+          <AppText
             numberOfLines={1}
             ellipsizeMode="tail"
             className="shrink text-sm text-fg-default whitespace-nowrap"
           >
             {description}
-          </Text>
+          </AppText>
         )}
         {timeAgo && (
-          <Text className="text-sm text-fg-muted" font="Outfit Light">
+          <AppText className="text-sm text-fg-muted" font="Outfit Light">
             {timeAgo}
-          </Text>
+          </AppText>
         )}
       </View>
       <View className={twMerge(isSelecting && 'items-center justify-center')}>

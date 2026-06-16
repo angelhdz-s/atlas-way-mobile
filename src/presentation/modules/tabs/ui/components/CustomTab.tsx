@@ -1,10 +1,10 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
-import Animated from 'react-native-reanimated';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { getThemeColors } from '@/styles';
 import { Pressable, View } from 'react-native';
+import Animated from 'react-native-reanimated';
 import { twMerge } from 'tailwind-merge';
 import { useUniwind } from 'uniwind';
-import { getThemeColors } from '@/styles';
-import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
@@ -53,7 +53,7 @@ export function CustomTab({
         <View>
           <Icon size={16} strokeWidth={1.5} className="text-fg-strong" />
         </View>
-        <Text className="text-sm text-fg-strong">{label}</Text>
+        <AppText className="text-sm text-fg-strong">{label}</AppText>
       </Animated.View>
     </Pressable>
   );

@@ -1,4 +1,4 @@
-import { Text } from '@/presentation/ui/components/Text';
+import { AppText } from '@/presentation/ui/components/AppText';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 
@@ -27,9 +27,9 @@ export function Badge({ className, text, variant = 'default' }: Props) {
         className
       )}
     >
-      <Text className={twMerge('text-sm leading-tight', variantClassName)}>
+      <AppText className={twMerge('text-sm leading-tight', variantClassName)}>
         {text}
-      </Text>
+      </AppText>
     </View>
   );
 }

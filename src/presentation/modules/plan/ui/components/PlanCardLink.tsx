@@ -1,7 +1,7 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
-import type { RoutePath } from 'expo-router';
 import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
-import { Text } from '@/presentation/ui/components/Text';
+import { AppText } from '@/presentation/ui/components/AppText';
+import type { RoutePath } from 'expo-router';
 import { Link } from 'expo-router';
 import { Pressable, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
@@ -37,10 +37,10 @@ export function PlanCardLink({
           </View>
           <View className="flex-1">
             <View className="flex-row items-center h-8">
-              <Text className="flex-1 text-fg-strong">{title}</Text>
-              {badge && <Text className="text-accent">{badge}</Text>}
+              <AppText className="flex-1 text-fg-strong">{title}</AppText>
+              {badge && <AppText className="text-accent">{badge}</AppText>}
             </View>
-            <Text className="">{description}</Text>
+            <AppText className="">{description}</AppText>
           </View>
           <View className="size-8 justify-center items-center">
             <IconArrowRight size={20} className="text-fg-default" />

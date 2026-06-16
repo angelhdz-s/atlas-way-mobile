@@ -1,8 +1,8 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
+import { AppText } from '@/presentation/ui/components/AppText';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
-import { Text } from '@/presentation/ui/components/Text';
 
 type Props = {
   className?: string;
@@ -24,14 +24,14 @@ export function LinkCard({ className, Icon, title, description }: Props) {
           <Icon size={16} className="text-fg-default" />
         </View>
         <View className="flex-1">
-          <Text className="text-fg-strong">{title}</Text>
+          <AppText className="text-fg-strong">{title}</AppText>
         </View>
         <View>
           <IconArrowRight size={20} className="text-fg-default" />
         </View>
       </View>
       <View>
-        <Text className="text-fg-default text-sm">{description}</Text>
+        <AppText className="text-fg-default text-sm">{description}</AppText>
       </View>
     </View>
   );
