@@ -1,23 +1,49 @@
-import { Text } from "@/presentation/ui/components/Text";
-import { Bell as LBell } from "lucide-react-native";
-import { View } from "react-native";
-import { twMerge } from "tailwind-merge";
-import { withUniwind } from "uniwind";
+import { IconButton } from '@/presentation/modules/button/ui/components/IconButton';
+import {
+  IconMoon,
+  IconSun,
+} from '@/presentation/modules/icon/ui/components/Icons';
+import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { DARK_THEME, LIGHT_THEME } from '@/styles';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import type { ThemeName } from 'uniwind';
+import { Uniwind } from 'uniwind';
 
 type Props = {
   className?: string;
+  lockedTheme?: ThemeName;
 };
 
-const Bell = withUniwind(LBell);
+export function LandingStackHeader({ className, lockedTheme }: Props) {
+  const { isDark } = useAppTheme();
+  const colors = {
+    light: LIGHT_THEME.fgDefault,
+    dark: DARK_THEME.fgDefault,
+  };
+  const handleToggleTheme = () => {
+    Uniwind.setTheme(isDark ? 'light' : 'dark');
+  };
 
-export function LandingStackHeader({ className }: Props) {
   return (
     <View
-      className={twMerge("flex-row items-center justify-between", className)}
+      className={twMerge('flex-row items-center justify-between', className)}
     >
-      <Text>angelhdzs15@gmail.com</Text>
+      <AppText colors={colors} lockedTheme={lockedTheme}>
+        angelhdzs15@gmail.com
+      </AppText>
       <View className="flex-row gap-4 items-center">
-        <Bell className="text-fg-default" />
+        <IconButton
+          onPress={handleToggleTheme}
+          Icon={isDark ? IconSun : IconMoon}
+          aria-label="Switch theme"
+          variant={{
+            size: 'sm',
+            color: 'simple',
+          }}
+          lockedTheme={lockedTheme}
+        />
         <View className="size-10 bg-fill-back border border-bd-default rounded-full"></View>
       </View>
     </View>
