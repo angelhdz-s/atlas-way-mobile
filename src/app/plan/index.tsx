@@ -1,14 +1,14 @@
-import { BackgroundGradient } from "@/presentation/modules/decorative/ui/components/BackgroundGradient";
+import { BackgroundGradient } from '@/presentation/modules/decorative/ui/components/BackgroundGradient';
 import {
   IconClipboardList,
   IconDumbbell,
   IconRoute,
-} from "@/presentation/modules/icon/ui/components/Icons";
-import { PlanCardLink } from "@/presentation/modules/plan/ui/components/PlanCardLink";
-import { LandingStackHeader } from "@/presentation/ui/components/LandingStackHeader";
-import { PageContainer } from "@/presentation/ui/components/PageContainer";
-import { PageHeader } from "@/presentation/ui/components/PageHeader";
-import { View } from "react-native";
+} from '@/presentation/modules/icon/ui/components/Icons';
+import { PageContainer } from '@/presentation/modules/page/ui/components/PageContainer';
+import { PageHeader } from '@/presentation/modules/page/ui/components/PageHeader';
+import { PlanCardLink } from '@/presentation/modules/plan/ui/components/PlanCardLink';
+import { LandingStackHeader } from '@/presentation/ui/components/LandingStackHeader';
+import { View } from 'react-native';
 
 export default function Plan() {
   return (
