@@ -1,7 +1,7 @@
-import type { VariantProps } from 'tailwind-variants';
 import type { ButtonVariantsType } from '@/presentation/modules/button/ui/button.ui.types';
-import { tv } from 'tailwind-variants';
 import { BUTTON_DEFAULT_VARIANTS } from '@/presentation/modules/button/ui/button.ui.variants.constants';
+import type { VariantProps } from 'tailwind-variants';
+import { tv } from 'tailwind-variants';
 
 export const buttonVariants = tv({
   base: 'rounded-full items-center justify-center flex-row',

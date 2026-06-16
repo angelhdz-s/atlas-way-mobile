@@ -1,4 +1,3 @@
-import { withUniwind } from 'uniwind';
 import {
   Activity,
   ArrowRight,
@@ -19,6 +18,7 @@ import {
   Trophy,
   Weight,
 } from 'lucide-react-native';
+import { withUniwind } from 'uniwind';
 
 export const IconArrowRight = withUniwind(ArrowRight);
 export const IconDumbbell = withUniwind(Dumbbell);

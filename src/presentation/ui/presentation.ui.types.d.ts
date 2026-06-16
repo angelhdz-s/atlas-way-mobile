@@ -1,33 +1,33 @@
 export type FontFamily =
-  | "FunnelDisplay Light"
-  | "FunnelDisplay Regular"
-  | "FunnelDisplay Medium"
-  | "FunnelDisplay SemiBold"
-  | "FunnelDisplay Bold"
-  | "FunnelDisplay ExtraBold"
-  | "Outfit Thin"
-  | "Outfit ExtraLight"
-  | "Outfit Light"
-  | "Outfit Regular"
-  | "Outfit Medium"
-  | "Outfit SemiBold"
-  | "Outfit Bold"
-  | "Outfit ExtraBold"
-  | "Outfit Black";
+  | 'FunnelDisplay Light'
+  | 'FunnelDisplay Regular'
+  | 'FunnelDisplay Medium'
+  | 'FunnelDisplay SemiBold'
+  | 'FunnelDisplay Bold'
+  | 'FunnelDisplay ExtraBold'
+  | 'Outfit Thin'
+  | 'Outfit ExtraLight'
+  | 'Outfit Light'
+  | 'Outfit Regular'
+  | 'Outfit Medium'
+  | 'Outfit SemiBold'
+  | 'Outfit Bold'
+  | 'Outfit ExtraBold'
+  | 'Outfit Black';
 
 export type FontFamilyStyleNames =
-  | "funnel-display-300"
-  | "funnel-display-400"
-  | "funnel-display-500"
-  | "funnel-display-600"
-  | "funnel-display-700"
-  | "funnel-display-800"
-  | "outfit-100"
-  | "outfit-200"
-  | "outfit-300"
-  | "outfit-400"
-  | "outfit-500"
-  | "outfit-600"
-  | "outfit-700"
-  | "outfit-800"
-  | "outfit-900";
+  | 'funnel-display-300'
+  | 'funnel-display-400'
+  | 'funnel-display-500'
+  | 'funnel-display-600'
+  | 'funnel-display-700'
+  | 'funnel-display-800'
+  | 'outfit-100'
+  | 'outfit-200'
+  | 'outfit-300'
+  | 'outfit-400'
+  | 'outfit-500'
+  | 'outfit-600'
+  | 'outfit-700'
+  | 'outfit-800'
+  | 'outfit-900';

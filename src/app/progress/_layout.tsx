@@ -1,6 +1,6 @@
-import { getFont } from "@/presentation/utils/font.utils";
-import { DARK_THEME } from "@/styles";
-import { Stack } from "expo-router";
+import { getFont } from '@/presentation/utils/font.utils';
+import { DARK_THEME } from '@/styles';
+import { Stack } from 'expo-router';
 
 export default function Layout() {
   return (
@@ -9,15 +9,15 @@ export default function Layout() {
         headerTransparent: true,
         headerTitleStyle: {
           color: DARK_THEME.fgStrong,
-          fontFamily: getFont("Outfit Regular"),
-          fontWeight: "400",
+          fontFamily: getFont('Outfit Regular'),
+          fontWeight: '400',
         },
       }}
     >
       <Stack.Screen
         name="index"
         options={{
-          title: "Progress",
+          title: 'Progress',
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
           },

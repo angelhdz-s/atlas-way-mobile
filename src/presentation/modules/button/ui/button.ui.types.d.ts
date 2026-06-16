@@ -1,5 +1,5 @@
-import type { PressableProps } from 'react-native';
 import type { ButtonVariantProps } from '@/presentation/modules/button/ui/button.ui.variants';
+import type { PressableProps } from 'react-native';
 
 export type ButtonVariantsType = {
   color: {

@@ -1,6 +1,6 @@
-import { getFont } from "@/presentation/utils/font.utils";
-import { DARK_THEME } from "@/styles";
-import { Stack } from "expo-router";
+import { getFont } from '@/presentation/utils/font.utils';
+import { DARK_THEME } from '@/styles';
+import { Stack } from 'expo-router';
 
 export default function Layout() {
   return (
@@ -8,15 +8,15 @@ export default function Layout() {
       screenOptions={{
         headerTitleStyle: {
           color: DARK_THEME.fgStrong,
-          fontFamily: getFont("Outfit Regular"),
-          fontWeight: "400",
+          fontFamily: getFont('Outfit Regular'),
+          fontWeight: '400',
         },
       }}
     >
       <Stack.Screen
         name="index"
         options={{
-          title: "Plan",
+          title: 'Plan',
           headerShown: false,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
@@ -26,7 +26,7 @@ export default function Layout() {
       <Stack.Screen
         name="routines"
         options={{
-          title: "Your Routines",
+          title: 'Your Routines',
           headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
@@ -36,7 +36,7 @@ export default function Layout() {
       <Stack.Screen
         name="sessions"
         options={{
-          title: "Your Sessions",
+          title: 'Your Sessions',
           headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,
@@ -46,7 +46,7 @@ export default function Layout() {
       <Stack.Screen
         name="exercises"
         options={{
-          title: "Your Exercises",
+          title: 'Your Exercises',
           headerTransparent: true,
           contentStyle: {
             backgroundColor: DARK_THEME.fillBack,

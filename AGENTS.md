@@ -40,21 +40,21 @@ No typecheck or test scripts configured yet.
 
 ```typescript
 // Correct - type import first, then value import
-import type { FontFamily } from "@/presentation/ui/presentation.ui.types";
-import { getFont } from "@/presentation/utils/font.utils";
+import type { FontFamily } from '@/presentation/ui/presentation.ui.types';
+import { getFont } from '@/presentation/utils/font.utils';
 
 // Correct - separate type and value from same module
-import type { ColorScheme } from "@/styles";
-import { DARK_THEME, LIGHT_THEME } from "@/styles";
+import type { ColorScheme } from '@/styles';
+import { DARK_THEME, LIGHT_THEME } from '@/styles';
 
 // Incorrect - mixed type and value
-import { DARK_THEME, type ColorScheme } from "@/styles";
+import { DARK_THEME, type ColorScheme } from '@/styles';
 
 // Incorrect - relative import
-import { Text } from "../ui/components/Text";
+import { Text } from '../ui/components/Text';
 
 // Correct - absolute import
-import { Text } from "@/presentation/ui/components/Text";
+import { Text } from '@/presentation/ui/components/Text';
 ```
 
 ## Styling
