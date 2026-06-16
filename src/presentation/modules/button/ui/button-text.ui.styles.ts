@@ -1,20 +1,20 @@
 import type { ButtonColorVariant } from '@/presentation/modules/button/ui/button.ui.types';
-import { DARK_THEME, getThemeColors } from '@/styles';
-import { StyleSheet } from 'react-native';
+import { DARK_THEME, LIGHT_THEME } from '@/styles';
 
 export function getButtonTextStyles(
-  isDark: boolean,
   colorVariant?: keyof ButtonColorVariant['color']
 ) {
-  const COLORS = getThemeColors(isDark);
-  const styles = StyleSheet.create({
-    primary: {
-      color: DARK_THEME.fgStrong,
-    },
-    rest: {
-      color: COLORS.fgStrong,
-    },
-  });
+  const darkColor = DARK_THEME.fgStrong;
+  const lightColor = LIGHT_THEME.fgStrong;
 
-  return colorVariant === 'primary' ? styles.primary : styles.rest;
+  if (colorVariant === 'primary')
+    return {
+      dark: darkColor,
+      light: darkColor,
+    };
+
+  return {
+    dark: darkColor,
+    light: lightColor,
+  };
 }
