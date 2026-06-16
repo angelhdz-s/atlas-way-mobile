@@ -10,10 +10,12 @@ import {
   Ellipsis,
   Flame,
   Home,
+  Moon,
   Plus,
   Route,
   Search,
   SlidersHorizontal,
+  Sun,
   Trophy,
   Weight,
 } from 'lucide-react-native';
@@ -34,5 +36,7 @@ export const IconSearch = withUniwind(Search);
 export const IconSlidersHorizontal = withUniwind(SlidersHorizontal);
 export const IconEllipsis = withUniwind(Ellipsis);
 export const IconPlus = withUniwind(Plus);
+export const IconSun = withUniwind(Sun);
+export const IconMoon = withUniwind(Moon);
 
 export type IconType = typeof IconArrowRight;
