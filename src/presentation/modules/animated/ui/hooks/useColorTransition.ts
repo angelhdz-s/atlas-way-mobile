@@ -18,8 +18,9 @@ export function useColorTransition({
   const currentColor = useSharedValue(color);
 
   useEffect(() => {
+    if (currentColor.value === color) return;
     currentColor.value = color;
-  }, [color]);
+  }, [color, currentColor]);
 
   return useAnimatedStyle(() => {
     return {
