@@ -13,6 +13,10 @@ export type ButtonVariantsType = {
     md: string;
     lg: string;
   };
+  theme: {
+    dark: string;
+    light: string;
+  };
 };
 
 type ButtonColorVariant = Pick<ButtonVariantsType, 'color'>;

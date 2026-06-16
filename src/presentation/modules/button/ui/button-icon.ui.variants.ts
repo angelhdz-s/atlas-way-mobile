@@ -11,7 +11,7 @@ export const buttonIconVariants = tv({
   base: 'text-fg-strong',
   variants: {
     color: {
-      primary: 'text-fg-strong-dark',
+      primary: '',
       outline: '',
       subtle: '',
       simple: '',
@@ -21,7 +21,18 @@ export const buttonIconVariants = tv({
       md: '',
       lg: '',
     },
+    theme: {
+      dark: 'text-fg-strong-dark',
+      light: 'text-fg-strong-light',
+    },
   } satisfies ButtonVariantsType,
+  compoundVariants: [
+    {
+      theme: 'dark',
+      color: 'primary',
+      class: 'text-fg-strong-dark',
+    },
+  ],
   defaultVariants: BUTTON_DEFAULT_VARIANTS,
 });
 

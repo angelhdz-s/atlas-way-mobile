@@ -16,6 +16,10 @@ export const buttonTextVariants = tv({
       md: '',
       lg: '',
     },
+    theme: {
+      dark: '',
+      light: '',
+    },
   } satisfies ButtonVariantsType,
   defaultVariants: BUTTON_DEFAULT_VARIANTS,
 });

@@ -17,6 +17,10 @@ export const buttonVariants = tv({
       subtle: 'bg-fill-top',
       simple: '',
     },
+    theme: {
+      dark: '',
+      light: '',
+    },
   } satisfies ButtonVariantsType,
   defaultVariants: BUTTON_DEFAULT_VARIANTS,
 });
