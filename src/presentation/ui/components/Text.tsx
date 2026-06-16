@@ -1,10 +1,10 @@
-import type { TextProps } from 'react-native';
 import type { FontFamily } from '@/presentation/ui/presentation.ui.types';
+import { getFont } from '@/presentation/utils/font.utils';
+import type { TextProps as RNTextProps } from 'react-native';
 import { Text as RNText } from 'react-native';
 import { twMerge } from 'tailwind-merge';
-import { getFont } from '@/presentation/utils/font.utils';
 
-type Props = TextProps & {
+export type TextProps = RNTextProps & {
   className?: string;
   font?: FontFamily;
 };
@@ -13,14 +13,15 @@ export function Text({
   className,
   children,
   font = 'Outfit Regular',
+  style,
   ...props
-}: Props) {
+}: TextProps) {
   const fontFamily = getFont(font);
   return (
     <RNText
+      className={twMerge('text-base tracking-tight', className)}
+      style={{ fontFamily, ...style }}
       {...props}
-      className={twMerge('text-base text-fg-default tracking-tight', className)}
-      style={{ fontFamily }}
     >
       {children}
     </RNText>
