@@ -1,24 +1,24 @@
-import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import { getButtonColors } from '@/presentation/modules/button/ui/button-color.ui.styles';
+import { getIconSize } from '@/presentation/modules/button/ui/button-icon.ui.variants';
 import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
 import type { ButtonVariantProps } from '@/presentation/modules/button/ui/button.ui.variants';
-import { View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
-import { Text } from '@/presentation/ui/components/Text';
-import { buttonTextVariants } from '@/presentation/modules/button/ui/button-text.ui.variants';
-import {
-  buttonIconVariants,
-  getIconSize,
-} from '@/presentation/modules/button/ui/button-icon.ui.variants';
-import { Button } from '@/presentation/modules/button/ui/components/Button';
 import {
   BUTTON_ICON_STROKE_WIDTH,
   BUTTON_TEXT_FONT,
 } from '@/presentation/modules/button/ui/button.ui.variants.constants';
+import { Button } from '@/presentation/modules/button/ui/components/Button';
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import type { ThemeName } from 'uniwind';
 
 type Props = ButtonProps & {
   textCentered?: boolean;
   text: string;
   iconSize?: ButtonVariantProps['size'];
+  lockedTheme?: ThemeName;
 } & (
     | {
         LeftIcon: IconType;
@@ -41,10 +41,13 @@ export function TextIconButton({
   textCentered = false,
   className,
   iconSize,
+  lockedTheme,
   ...buttonProps
 }: Props) {
-  const textClassName = buttonTextVariants(buttonProps.variant);
-  const iconClassName = buttonIconVariants(buttonProps.variant);
+  const { isDark } = useAppTheme();
+  const colors = getButtonColors(buttonProps.variant?.color);
+  const isThemeDark =
+    lockedTheme === undefined ? isDark : lockedTheme === 'dark';
   const iconFinalSize = getIconSize(iconSize ?? buttonProps.variant?.size);
   return (
     <Button
@@ -61,15 +64,19 @@ export function TextIconButton({
             <LeftIcon
               strokeWidth={BUTTON_ICON_STROKE_WIDTH}
               size={iconFinalSize}
-              className={iconClassName}
+              color={isThemeDark ? colors.dark : colors.dark}
             />
           )}
         </View>
       )}
       <View className={twMerge(textCentered && 'flex-1')}>
-        <Text font={BUTTON_TEXT_FONT} className={textClassName}>
+        <AppText
+          font={BUTTON_TEXT_FONT}
+          colors={colors}
+          lockedTheme={lockedTheme}
+        >
           {text}
-        </Text>
+        </AppText>
       </View>
       {(textCentered || RightIcon) && (
         <View style={{ width: iconFinalSize, height: iconFinalSize }}>
@@ -77,7 +84,7 @@ export function TextIconButton({
             <RightIcon
               strokeWidth={BUTTON_ICON_STROKE_WIDTH}
               size={iconFinalSize}
-              className={iconClassName}
+              color={isThemeDark ? colors.dark : colors.dark}
             />
           )}
         </View>
