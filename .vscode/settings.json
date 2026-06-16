@@ -31,7 +31,10 @@
     "backdropColorClassName",
     "backgroundColorClassName",
     "ListFooterComponentClassName",
-    "ListHeaderComponentClassName"
+    "ListHeaderComponentClassName",
+    // Custom class names
+    "titleClassName",
+    "descriptionClassName"
   ],
   "tailwindCSS.classFunctions": ["useResolveClassNames", "tv"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
