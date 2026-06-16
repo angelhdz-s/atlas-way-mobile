@@ -1,7 +1,7 @@
-import { useHeaderHeight } from "expo-router/build/react-navigation";
-import { ScrollView } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { twMerge } from "tailwind-merge";
+import { useHeaderHeight } from 'expo-router/build/react-navigation';
+import { ScrollView } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { twMerge } from 'tailwind-merge';
 
 type Props = {
   children?: React.ReactNode;
@@ -19,7 +19,7 @@ export function PageContainer({
   const paddingTop = noHeader ? insets.top : headerHeight;
   return (
     <ScrollView
-      className={twMerge("size-full px-2 gap-4", className)}
+      className={twMerge('size-full px-2 gap-4', className)}
       style={{
         paddingBottom: insets.bottom,
         paddingTop: paddingTop + 8,
