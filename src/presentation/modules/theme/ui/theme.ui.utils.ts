@@ -9,7 +9,7 @@ type GerLightDarkColorsProps = {
 /**
  * @description Utility function for theme locked components. Verifies if a theme is locked, if isn't, returns the current app theme
  */
-export function getLightDarkColors({
+export function getLockedLightDarkColors({
   darkColor,
   lightColor,
   lockedTheme,
