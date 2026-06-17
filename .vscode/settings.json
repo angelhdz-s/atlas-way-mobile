@@ -2,7 +2,8 @@
   "editor.codeActionsOnSave": {
     "source.sortMembers": "explicit",
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.format": "explicit"
+    "source.fixAll.prettier": "explicit",
+    "source.fixAll": "explicit"
   },
   "tailwindCSS.classAttributes": [
     "class",
