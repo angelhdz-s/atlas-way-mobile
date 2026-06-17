@@ -1,7 +1,7 @@
+import type { TextProps } from '@/presentation/ui/components/Text';
 import { AnimatedText } from '@/presentation/modules/animated/ui/components/AnimatedText';
 import { useColorTransition } from '@/presentation/modules/animated/ui/hooks/useColorTransition';
 import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
-import type { TextProps } from '@/presentation/ui/components/Text';
 
 type Props = TextProps & {
   colors: {

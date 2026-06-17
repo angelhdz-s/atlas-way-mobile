@@ -1,8 +1,8 @@
 import type { FontFamily } from '@/presentation/ui/presentation.ui.types';
-import { getFont } from '@/presentation/utils/font.utils';
 import type { TextProps as RNTextProps } from 'react-native';
 import { Text as RNText } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { getFont } from '@/presentation/utils/font.utils';
 
 export type TextProps = RNTextProps & {
   className?: string;

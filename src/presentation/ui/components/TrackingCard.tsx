@@ -1,9 +1,9 @@
-import { AppText } from '@/presentation/ui/components/AppText';
-import { getLightDarkColors } from '@/presentation/utils/style.utils';
 import { ArrowRight, Dumbbell } from 'lucide-react-native';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 import { withUniwind } from 'uniwind';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { getLightDarkColors } from '@/presentation/utils/style.utils';
 
 type Props = {
   className?: string;

@@ -1,8 +1,8 @@
-import { TAB_BAR_HEIGHT } from '@/presentation/modules/tabs/ui/tabs.ui.constants';
-import { getTarBarMarginBottom } from '@/presentation/modules/tabs/ui/tabs.ui.utils';
 import { View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { twMerge } from 'tailwind-merge';
+import { TAB_BAR_HEIGHT } from '@/presentation/modules/tabs/ui/tabs.ui.constants';
+import { getTarBarMarginBottom } from '@/presentation/modules/tabs/ui/tabs.ui.utils';
 
 type Props = {
   className?: string;

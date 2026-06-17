@@ -1,9 +1,9 @@
-import { StreakDayNoStateCircle } from '@/presentation/modules/streak/ui/components/StreakDayNoStateCircle';
-import { AppText } from '@/presentation/ui/components/AppText';
 import { Check } from 'lucide-react-native';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 import { withUniwind } from 'uniwind';
+import { StreakDayNoStateCircle } from '@/presentation/modules/streak/ui/components/StreakDayNoStateCircle';
+import { AppText } from '@/presentation/ui/components/AppText';
 
 type Props = {
   completed?: boolean;

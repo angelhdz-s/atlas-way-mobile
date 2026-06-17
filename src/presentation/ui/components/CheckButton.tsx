@@ -1,6 +1,6 @@
-import { IconCheck } from '@/presentation/modules/icon/ui/components/Icons';
 import { Pressable, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { IconCheck } from '@/presentation/modules/icon/ui/components/Icons';
 
 type Props = {
   className?: string;

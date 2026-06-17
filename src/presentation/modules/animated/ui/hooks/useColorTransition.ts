@@ -1,10 +1,10 @@
-import { ANIMATED_DEFAULT_TRANSITION_DURATION } from '@/presentation/modules/animated/ui/animated.ui.constants';
 import { useEffect } from 'react';
 import {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+import { ANIMATED_DEFAULT_TRANSITION_DURATION } from '@/presentation/modules/animated/ui/animated.ui.constants';
 
 type Props = {
   color: string;

@@ -1,18 +1,18 @@
-import { getButtonColors } from '@/presentation/modules/button/ui/button-color.ui.styles';
-import { getIconSize } from '@/presentation/modules/button/ui/button-icon.ui.variants';
 import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
 import type { ButtonVariantProps } from '@/presentation/modules/button/ui/button.ui.variants';
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import type { ThemeName } from 'uniwind';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { getButtonColors } from '@/presentation/modules/button/ui/button-color.ui.styles';
+import { getIconSize } from '@/presentation/modules/button/ui/button-icon.ui.variants';
 import {
   BUTTON_ICON_STROKE_WIDTH,
   BUTTON_TEXT_FONT,
 } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 import { Button } from '@/presentation/modules/button/ui/components/Button';
-import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
 import { AppText } from '@/presentation/ui/components/AppText';
-import { View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
-import type { ThemeName } from 'uniwind';
 
 type Props = ButtonProps & {
   textCentered?: boolean;

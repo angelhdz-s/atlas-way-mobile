@@ -1,6 +1,6 @@
 import type { ButtonColorVariant } from '@/presentation/modules/button/ui/button.ui.types';
-import { BUTTON_DEFAULT_VARIANTS } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 import { DARK_THEME, LIGHT_THEME } from '@/styles';
+import { BUTTON_DEFAULT_VARIANTS } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 
 export function getButtonColors(
   colorVariant: keyof ButtonColorVariant['color'] = BUTTON_DEFAULT_VARIANTS.color

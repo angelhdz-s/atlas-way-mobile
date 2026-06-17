@@ -1,10 +1,10 @@
+import { DARK_THEME } from '@/styles';
+import { TextInput, View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
 import {
   IconSearch,
   IconSlidersHorizontal,
 } from '@/presentation/modules/icon/ui/components/Icons';
-import { DARK_THEME } from '@/styles';
-import { TextInput, View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
 
 type Props = {
   className?: string;

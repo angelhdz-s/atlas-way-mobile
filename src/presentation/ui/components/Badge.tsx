@@ -1,6 +1,6 @@
-import { AppText } from '@/presentation/ui/components/AppText';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { AppText } from '@/presentation/ui/components/AppText';
 
 export type BadgeVariant = 'default' | 'subtle' | 'success' | 'info' | 'danger';
 

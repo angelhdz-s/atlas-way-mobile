@@ -1,11 +1,11 @@
 import type { ButtonVariantsType } from '@/presentation/modules/button/ui/button.ui.types';
 import type { ButtonVariantProps } from '@/presentation/modules/button/ui/button.ui.variants';
+import { tv } from 'tailwind-variants';
 import {
   BUTTON_DEFAULT_VARIANTS,
   BUTTON_ICON_SIZE,
   BUTTON_ICON_SIZES,
 } from '@/presentation/modules/button/ui/button.ui.variants.constants';
-import { tv } from 'tailwind-variants';
 
 export const buttonIconVariants = tv({
   base: 'text-fg-strong',

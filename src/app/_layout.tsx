@@ -1,10 +1,10 @@
 import '@/global.css';
-import { CustomTabBar } from '@/presentation/modules/tabs/ui/components/CustomTabBar';
 import { useFonts } from 'expo-font';
 import { Tabs } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { CustomTabBar } from '@/presentation/modules/tabs/ui/components/CustomTabBar';
 
 SplashScreen.preventAutoHideAsync();
 

@@ -1,9 +1,9 @@
-import { getButtonColors } from '@/presentation/modules/button/ui/button-color.ui.styles';
 import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
+import type { ThemeName } from 'uniwind';
+import { getButtonColors } from '@/presentation/modules/button/ui/button-color.ui.styles';
 import { BUTTON_TEXT_FONT } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 import { Button } from '@/presentation/modules/button/ui/components/Button';
 import { AppText } from '@/presentation/ui/components/AppText';
-import type { ThemeName } from 'uniwind';
 
 type Props = ButtonProps & {
   text: string;

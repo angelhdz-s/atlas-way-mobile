@@ -1,3 +1,4 @@
+import { View } from 'react-native';
 import { IconButton } from '@/presentation/modules/button/ui/components/IconButton';
 import { IconPlus } from '@/presentation/modules/icon/ui/components/Icons';
 import { BottomActionBar } from '@/presentation/modules/layout/ui/components/BottomActionBar';
@@ -5,7 +6,6 @@ import { PageContainer } from '@/presentation/modules/page/ui/components/PageCon
 import { PageHeader } from '@/presentation/modules/page/ui/components/PageHeader';
 import { FilterBar } from '@/presentation/ui/components/FilterBar';
 import { ListItem } from '@/presentation/ui/components/ListItem';
-import { View } from 'react-native';
 
 export default function Routines() {
   return (

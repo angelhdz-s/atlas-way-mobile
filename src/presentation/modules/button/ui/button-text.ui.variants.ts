@@ -1,6 +1,6 @@
 import type { ButtonVariantsType } from '@/presentation/modules/button/ui/button.ui.types';
-import { BUTTON_DEFAULT_VARIANTS } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 import { tv } from 'tailwind-variants';
+import { BUTTON_DEFAULT_VARIANTS } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 
 export const buttonTextVariants = tv({
   base: 'text-fg-strong text-center',

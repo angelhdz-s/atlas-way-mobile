@@ -1,4 +1,7 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
+import type { BottomTabBarProps } from 'expo-router/build/react-navigation/bottom-tabs';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
 import {
   IconActivity,
   IconChartSpline,
@@ -8,9 +11,6 @@ import {
 import { CustomTab } from '@/presentation/modules/tabs/ui/components/CustomTab';
 import { TAB_BAR_HEIGHT } from '@/presentation/modules/tabs/ui/tabs.ui.constants';
 import { getTarBarMarginBottom } from '@/presentation/modules/tabs/ui/tabs.ui.utils';
-import type { BottomTabBarProps } from 'expo-router/build/react-navigation/bottom-tabs';
-import { View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
 
 type Props = {
   className?: string;

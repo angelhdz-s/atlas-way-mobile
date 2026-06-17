@@ -1,6 +1,6 @@
-import { getFont } from '@/presentation/utils/font.utils';
 import { DARK_THEME } from '@/styles';
 import { Stack } from 'expo-router';
+import { getFont } from '@/presentation/utils/font.utils';
 
 export default function Layout() {
   return (

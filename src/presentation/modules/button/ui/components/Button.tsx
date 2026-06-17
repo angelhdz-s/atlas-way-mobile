@@ -1,10 +1,10 @@
-import { AnimatedButton } from '@/presentation/modules/animated/ui/components/AnimatedButton';
-import { BUTTON_ANIMATION_DURATION } from '@/presentation/modules/button/ui/button.constants';
 import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
-import { buttonVariants } from '@/presentation/modules/button/ui/button.ui.variants';
 import type { GestureResponderEvent } from 'react-native';
 import { Easing, useSharedValue, withTiming } from 'react-native-reanimated';
 import { twMerge } from 'tailwind-merge';
+import { AnimatedButton } from '@/presentation/modules/animated/ui/components/AnimatedButton';
+import { BUTTON_ANIMATION_DURATION } from '@/presentation/modules/button/ui/button.constants';
+import { buttonVariants } from '@/presentation/modules/button/ui/button.ui.variants';
 
 type Props = ButtonProps;
 

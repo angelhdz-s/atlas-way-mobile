@@ -1,7 +1,7 @@
-import { AppText } from '@/presentation/ui/components/AppText';
+import type { ThemeName } from 'uniwind';
 import { DARK_THEME, LIGHT_THEME } from '@/styles';
 import { twMerge } from 'tailwind-merge';
-import type { ThemeName } from 'uniwind';
+import { AppText } from '@/presentation/ui/components/AppText';
 
 type Props = {
   text: string;

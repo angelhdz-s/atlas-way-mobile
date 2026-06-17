@@ -1,6 +1,6 @@
-import { AppText } from '@/presentation/ui/components/AppText';
-import { DARK_THEME, LIGHT_THEME } from '@/styles';
 import type { ThemeName } from 'uniwind';
+import { DARK_THEME, LIGHT_THEME } from '@/styles';
+import { AppText } from '@/presentation/ui/components/AppText';
 
 type Props = {
   className?: string;

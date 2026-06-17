@@ -1,3 +1,4 @@
+import { View } from 'react-native';
 import { BackgroundGradient } from '@/presentation/modules/decorative/ui/components/BackgroundGradient';
 import {
   IconClipboardList,
@@ -8,7 +9,6 @@ import { PageContainer } from '@/presentation/modules/page/ui/components/PageCon
 import { PageHeader } from '@/presentation/modules/page/ui/components/PageHeader';
 import { PlanCardLink } from '@/presentation/modules/plan/ui/components/PlanCardLink';
 import { LandingStackHeader } from '@/presentation/ui/components/LandingStackHeader';
-import { View } from 'react-native';
 
 export default function Plan() {
   return (

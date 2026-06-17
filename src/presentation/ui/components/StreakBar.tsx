@@ -1,13 +1,13 @@
-import { useColorTransition } from '@/presentation/modules/animated/ui/hooks/useColorTransition';
-import { StreakDay } from '@/presentation/modules/streak/ui/components/StreakDay';
-import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
-import { AppText } from '@/presentation/ui/components/AppText';
-import { getLightDarkColors } from '@/presentation/utils/style.utils';
 import { Flame } from 'lucide-react-native';
 import { View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { twMerge } from 'tailwind-merge';
 import { withUniwind } from 'uniwind';
+import { useColorTransition } from '@/presentation/modules/animated/ui/hooks/useColorTransition';
+import { StreakDay } from '@/presentation/modules/streak/ui/components/StreakDay';
+import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { getLightDarkColors } from '@/presentation/utils/style.utils';
 
 type Props = {
   className?: string;

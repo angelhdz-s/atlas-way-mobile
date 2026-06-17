@@ -1,10 +1,10 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
-import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
-import { AppText } from '@/presentation/ui/components/AppText';
 import type { RoutePath } from 'expo-router';
 import { Link } from 'expo-router';
 import { Pressable, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
+import { AppText } from '@/presentation/ui/components/AppText';
 
 type Props = {
   className?: string;

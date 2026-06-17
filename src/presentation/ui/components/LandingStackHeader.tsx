@@ -1,3 +1,8 @@
+import type { ThemeName } from 'uniwind';
+import { DARK_THEME, LIGHT_THEME } from '@/styles';
+import { View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
+import { Uniwind } from 'uniwind';
 import { IconButton } from '@/presentation/modules/button/ui/components/IconButton';
 import {
   IconMoon,
@@ -5,11 +10,6 @@ import {
 } from '@/presentation/modules/icon/ui/components/Icons';
 import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
 import { AppText } from '@/presentation/ui/components/AppText';
-import { DARK_THEME, LIGHT_THEME } from '@/styles';
-import { View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
-import type { ThemeName } from 'uniwind';
-import { Uniwind } from 'uniwind';
 
 type Props = {
   className?: string;

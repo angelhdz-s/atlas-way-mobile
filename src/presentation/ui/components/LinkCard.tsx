@@ -1,8 +1,8 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
-import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
-import { AppText } from '@/presentation/ui/components/AppText';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { IconArrowRight } from '@/presentation/modules/icon/ui/components/Icons';
+import { AppText } from '@/presentation/ui/components/AppText';
 
 type Props = {
   className?: string;

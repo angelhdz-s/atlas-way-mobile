@@ -1,10 +1,10 @@
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
-import { AppText } from '@/presentation/ui/components/AppText';
 import { getThemeColors } from '@/styles';
 import { Pressable, View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { twMerge } from 'tailwind-merge';
 import { useUniwind } from 'uniwind';
+import { AppText } from '@/presentation/ui/components/AppText';
 
 type Props = {
   className?: string;

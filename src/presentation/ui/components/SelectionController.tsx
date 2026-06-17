@@ -1,6 +1,6 @@
-import { AppText } from '@/presentation/ui/components/AppText';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
+import { AppText } from '@/presentation/ui/components/AppText';
 import { CheckButton } from './CheckButton';
 
 type Props = {

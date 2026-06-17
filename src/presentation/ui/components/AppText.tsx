@@ -1,7 +1,8 @@
-import { AnimatedColorText } from '@/presentation/modules/animated/ui/components/AnimatedColorText';
-import { Text, type TextProps } from '@/presentation/ui/components/Text';
-import { TEXT_DEFAULT_COLORS } from '@/presentation/utils/text.constants';
+import type { TextProps } from '@/presentation/ui/components/Text';
 import type { ThemeName } from 'uniwind';
+import { AnimatedColorText } from '@/presentation/modules/animated/ui/components/AnimatedColorText';
+import { Text } from '@/presentation/ui/components/Text';
+import { TEXT_DEFAULT_COLORS } from '@/presentation/utils/text.constants';
 
 type Props = TextProps & {
   lockedTheme?: ThemeName;

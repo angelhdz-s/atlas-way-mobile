@@ -1,8 +1,8 @@
+import { DARK_THEME } from '@/styles';
+import { Stack } from 'expo-router';
 import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
 import { getFont } from '@/presentation/utils/font.utils';
 import { getLightDarkColors } from '@/presentation/utils/style.utils';
-import { DARK_THEME } from '@/styles';
-import { Stack } from 'expo-router';
 
 export default function Layout() {
   const { isDark } = useAppTheme();

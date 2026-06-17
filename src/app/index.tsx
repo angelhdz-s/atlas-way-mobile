@@ -1,3 +1,6 @@
+import { Link } from 'expo-router';
+import { Pressable, View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
 import { TextButton } from '@/presentation/modules/button/ui/components/TextButton';
 import {
   IconCalendar,
@@ -16,9 +19,6 @@ import { LinkCard } from '@/presentation/ui/components/LinkCard';
 import { SectionHeader } from '@/presentation/ui/components/SectionHeader';
 import { StreakBar } from '@/presentation/ui/components/StreakBar';
 import { TrackingCard } from '@/presentation/ui/components/TrackingCard';
-import { Link } from 'expo-router';
-import { Pressable, View } from 'react-native';
-import { twMerge } from 'tailwind-merge';
 
 export default function Index() {
   return (

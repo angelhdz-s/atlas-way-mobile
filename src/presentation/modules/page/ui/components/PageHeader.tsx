@@ -1,8 +1,8 @@
-import { PageHeaderDescription } from '@/presentation/modules/page/ui/components/PageHeaderDescription';
-import { PageHeaderTitle } from '@/presentation/modules/page/ui/components/PageHeaderTitle';
+import type { ThemeName } from 'uniwind';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
-import type { ThemeName } from 'uniwind';
+import { PageHeaderDescription } from '@/presentation/modules/page/ui/components/PageHeaderDescription';
+import { PageHeaderTitle } from '@/presentation/modules/page/ui/components/PageHeaderTitle';
 
 type Props = {
   title: string;
