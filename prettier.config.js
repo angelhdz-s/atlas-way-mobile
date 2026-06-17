@@ -20,7 +20,6 @@ const config = {
     '^@/modules/(.*)$',
     '^[./]',
   ],
-  importOrderSortSpecifiers: true,
   plugins: ['@ianvs/prettier-plugin-sort-imports'],
 };
 
