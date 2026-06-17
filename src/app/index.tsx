@@ -1,3 +1,4 @@
+import { TextButton } from '@/presentation/modules/button/ui/components/TextButton';
 import {
   IconCalendar,
   IconClipboardList,
@@ -5,19 +6,19 @@ import {
   IconFlame,
   IconRoute,
   IconWeight,
-} from "@/presentation/modules/icon/ui/components/Icons";
-import { LandingStackHeader } from "@/presentation/ui/components/LandingStackHeader";
-import { LinkBar } from "@/presentation/ui/components/LinkBar";
-import { LinkCard } from "@/presentation/ui/components/LinkCard";
-import { PageContainer } from "@/presentation/ui/components/PageContainer";
-import { PageHeader } from "@/presentation/ui/components/PageHeader";
-import { SectionHeader } from "@/presentation/ui/components/SectionHeader";
-import { StreakBar } from "@/presentation/ui/components/StreakBar";
-import { Text } from "@/presentation/ui/components/Text";
-import { TrackingCard } from "@/presentation/ui/components/TrackingCard";
-import { Link } from "expo-router";
-import { Pressable, View } from "react-native";
-import { twMerge } from "tailwind-merge";
+} from '@/presentation/modules/icon/ui/components/Icons';
+import { PageContainer } from '@/presentation/modules/page/ui/components/PageContainer';
+import { PageHeader } from '@/presentation/modules/page/ui/components/PageHeader';
+import { AppText } from '@/presentation/ui/components/AppText';
+import { LandingStackHeader } from '@/presentation/ui/components/LandingStackHeader';
+import { LinkBar } from '@/presentation/ui/components/LinkBar';
+import { LinkCard } from '@/presentation/ui/components/LinkCard';
+import { SectionHeader } from '@/presentation/ui/components/SectionHeader';
+import { StreakBar } from '@/presentation/ui/components/StreakBar';
+import { TrackingCard } from '@/presentation/ui/components/TrackingCard';
+import { Link } from 'expo-router';
+import { Pressable, View } from 'react-native';
+import { twMerge } from 'tailwind-merge';
 
 export default function Index() {
   return (
@@ -25,25 +26,26 @@ export default function Index() {
       <View>
         <PageContainer className="relative bg-fill-back" noHeader>
           <View className="absolute w-[110%] h-86 z-0 -top-20 -left-4 mx-auto bg-linear-180 from-60% to-150% from-primary to-primary-dark" />
-          <LandingStackHeader />
+          <LandingStackHeader lockedTheme="dark" />
           <PageHeader
             title="Hi, Angel"
             description="Start achieving your fit goals"
+            lockedTheme="dark"
           />
 
           <StreakBar className="w-fit self-center" />
 
-          <Link asChild href={"/plan"} push>
+          <Link asChild href={'/plan'} push>
             <Pressable className="bg-primary rounded-3xl">
               {({ pressed }) => (
-                <TrackingCard className={twMerge(pressed && "opacity-50")} />
+                <TrackingCard className={twMerge(pressed && 'opacity-50')} />
               )}
             </Pressable>
           </Link>
 
           <View className="gap-4">
             <SectionHeader title="Your Performance">
-              <Text className="text-fg-strong">See More</Text>
+              <AppText className="text-fg-strong">See More</AppText>
             </SectionHeader>
             <View className="gap-2">
               <LinkBar
@@ -97,6 +99,7 @@ export default function Index() {
               </View>
             </View>
           </View>
+          <TextButton text="Hello world" />
         </PageContainer>
       </View>
     </View>

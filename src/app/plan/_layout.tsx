@@ -1,8 +1,15 @@
+import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
 import { getFont } from '@/presentation/utils/font.utils';
+import { getLightDarkColors } from '@/presentation/utils/style.utils';
 import { DARK_THEME } from '@/styles';
 import { Stack } from 'expo-router';
 
 export default function Layout() {
+  const { isDark } = useAppTheme();
+  const backgroundColors = getLightDarkColors('fillBack');
+  const backgroundColor = isDark
+    ? backgroundColors.dark
+    : backgroundColors.light;
   return (
     <Stack
       screenOptions={{
@@ -19,7 +26,7 @@ export default function Layout() {
           title: 'Plan',
           headerShown: false,
           contentStyle: {
-            backgroundColor: DARK_THEME.fillBack,
+            backgroundColor,
           },
         }}
       />
@@ -29,7 +36,7 @@ export default function Layout() {
           title: 'Your Routines',
           headerTransparent: true,
           contentStyle: {
-            backgroundColor: DARK_THEME.fillBack,
+            backgroundColor,
           },
         }}
       />
@@ -39,7 +46,7 @@ export default function Layout() {
           title: 'Your Sessions',
           headerTransparent: true,
           contentStyle: {
-            backgroundColor: DARK_THEME.fillBack,
+            backgroundColor,
           },
         }}
       />
@@ -49,7 +56,7 @@ export default function Layout() {
           title: 'Your Exercises',
           headerTransparent: true,
           contentStyle: {
-            backgroundColor: DARK_THEME.fillBack,
+            backgroundColor,
           },
         }}
       />

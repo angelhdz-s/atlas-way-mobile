@@ -20,7 +20,9 @@ export function PageHeader({
   return (
     <View className={twMerge('gap-1', className)}>
       <PageHeaderTitle text={title} lockedTheme={lockedTheme} />
-      {description && <PageHeaderDescription text={description} />}
+      {description && (
+        <PageHeaderDescription text={description} lockedTheme={lockedTheme} />
+      )}
     </View>
   );
 }

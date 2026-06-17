@@ -1,4 +1,5 @@
 import { AppText } from '@/presentation/ui/components/AppText';
+import { getLightDarkColors } from '@/presentation/utils/style.utils';
 import { ArrowRight, Dumbbell } from 'lucide-react-native';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
@@ -12,11 +13,16 @@ const IconDumbbell = withUniwind(Dumbbell);
 const IconArrowRight = withUniwind(ArrowRight);
 
 export function TrackingCard({ className }: Props) {
+  const strongColors = getLightDarkColors('fgStrong');
   return (
     <View className={twMerge('bg-primary rounded-[20px] p-4 gap-2', className)}>
       <View className="flex-row">
-        <AppText className="flex-1 text-sm text-fg-default-dark">Today</AppText>
-        <AppText className="text-sm text-fg-default-dark">May 27, 2026</AppText>
+        <AppText className="flex-1 text-sm" lockedTheme="dark">
+          Today
+        </AppText>
+        <AppText className="text-sm" lockedTheme="dark">
+          May 27, 2026
+        </AppText>
       </View>
       <View className="flex-row items-center">
         <View className="flex-row items-center flex-1 gap-2">
@@ -28,12 +34,14 @@ export function TrackingCard({ className }: Props) {
             />
           </View>
           <View>
-            <AppText className="text-sm leading-tight text-fg-default-dark">
+            <AppText className="text-sm leading-tight" lockedTheme="dark">
               Push, Pull, Legs
             </AppText>
             <AppText
-              className="text-lg leading-tight text-fg-strong-dark"
+              className="text-lg leading-tight"
               font="FunnelDisplay Bold"
+              lockedTheme="dark"
+              colors={strongColors}
             >
               Push Day
             </AppText>

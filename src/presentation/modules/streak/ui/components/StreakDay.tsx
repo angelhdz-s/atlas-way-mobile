@@ -1,3 +1,4 @@
+import { StreakDayNoStateCircle } from '@/presentation/modules/streak/ui/components/StreakDayNoStateCircle';
 import { AppText } from '@/presentation/ui/components/AppText';
 import { Check } from 'lucide-react-native';
 import { View } from 'react-native';
@@ -20,10 +21,14 @@ export function StreakDay({ text, completed = false }: Props) {
       </AppText>
       {completed ? (
         <View className="bg-primary rounded-full size-5 justify-center items-center">
-          <IconCheck strokeWidth={2} size={16} className="text-fg-strong" />
+          <IconCheck
+            strokeWidth={2}
+            size={16}
+            className="text-fg-strong-dark"
+          />
         </View>
       ) : (
-        <View className="bg-fill-top size-5 rounded-full" />
+        <StreakDayNoStateCircle />
       )}
     </View>
   );
