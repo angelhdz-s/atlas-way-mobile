@@ -5,6 +5,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { CustomTabBar } from '@/presentation/modules/tabs/ui/components/CustomTabBar';
+import { useAppTheme } from '@/presentation/modules/theme/ui/hooks/useAppTheme';
+import { getLightDarkColors } from '@/presentation/utils/style.utils';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -33,6 +35,9 @@ export default function RootLayout() {
     }
   }, [loaded, error]);
 
+  const { isDark } = useAppTheme();
+  const bgColors = getLightDarkColors('fillBack');
+
   if (!loaded && !error) {
     return null;
   }
@@ -42,6 +47,9 @@ export default function RootLayout() {
       <Tabs
         screenOptions={{
           headerShown: false,
+          sceneStyle: {
+            backgroundColor: isDark ? bgColors.dark : bgColors.light,
+          },
         }}
         tabBar={(props) => <CustomTabBar {...props} />}
       >
