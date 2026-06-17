@@ -11,8 +11,13 @@ const config = {
   useTabs: false,
   endOfLine: 'lf',
   trailingComma: 'es5',
+  plugins: ['@ianvs/prettier-plugin-sort-imports'],
   importOrder: [
     '<TYPES>',
+    '<TYPES>^@/shared/(.*)$',
+    '<TYPES>^@/presentation/(.*)$',
+    '<TYPES>^@/modules/(.*)$',
+    '<TYPES>^[.]',
     '<BUILTIN_MODULES>',
     '<THIRD_PARTY_MODULES>',
     '^@/shared/(.*)$',
@@ -20,7 +25,6 @@ const config = {
     '^@/modules/(.*)$',
     '^[./]',
   ],
-  plugins: ['@ianvs/prettier-plugin-sort-imports'],
 };
 
 module.exports = config;
