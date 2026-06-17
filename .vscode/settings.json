@@ -40,5 +40,6 @@
   "editor.formatOnSave": true,
   "files.eol": "\n",
   "js/ts.preferences.importModuleSpecifier": "non-relative",
-  "js/ts.preferences.preferTypeOnlyAutoImports": true
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode"
 }
