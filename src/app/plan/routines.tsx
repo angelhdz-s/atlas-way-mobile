@@ -6,10 +6,11 @@ import { PageContainer } from '@/presentation/modules/page/ui/components/PageCon
 import { PageHeader } from '@/presentation/modules/page/ui/components/PageHeader';
 import { FilterBar } from '@/presentation/ui/components/FilterBar';
 import { ListItem } from '@/presentation/ui/components/ListItem';
+import { ScreenContainer } from '@/presentation/ui/components/ScreenContainer';
 
 export default function Routines() {
   return (
-    <View className="relative flex-1 bg-fill-back">
+    <ScreenContainer className="relative">
       <BottomActionBar className="items-end">
         <IconButton aria-label="Add Routine" Icon={IconPlus} />
       </BottomActionBar>
@@ -51,6 +52,6 @@ export default function Routines() {
           />
         </View>
       </PageContainer>
-    </View>
+    </ScreenContainer>
   );
 }

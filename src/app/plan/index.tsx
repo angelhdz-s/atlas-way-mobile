@@ -9,10 +9,11 @@ import { PageContainer } from '@/presentation/modules/page/ui/components/PageCon
 import { PageHeader } from '@/presentation/modules/page/ui/components/PageHeader';
 import { PlanCardLink } from '@/presentation/modules/plan/ui/components/PlanCardLink';
 import { LandingStackHeader } from '@/presentation/ui/components/LandingStackHeader';
+import { ScreenContainer } from '@/presentation/ui/components/ScreenContainer';
 
 export default function Plan() {
   return (
-    <View className="flex-1">
+    <ScreenContainer>
       <PageContainer className="relative flex-1" noHeader>
         <BackgroundGradient />
         <LandingStackHeader />
@@ -45,6 +46,6 @@ export default function Plan() {
           />
         </View>
       </PageContainer>
-    </View>
+    </ScreenContainer>
   );
 }

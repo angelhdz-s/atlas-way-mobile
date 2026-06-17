@@ -16,15 +16,16 @@ import { AppText } from '@/presentation/ui/components/AppText';
 import { LandingStackHeader } from '@/presentation/ui/components/LandingStackHeader';
 import { LinkBar } from '@/presentation/ui/components/LinkBar';
 import { LinkCard } from '@/presentation/ui/components/LinkCard';
+import { ScreenContainer } from '@/presentation/ui/components/ScreenContainer';
 import { SectionHeader } from '@/presentation/ui/components/SectionHeader';
 import { StreakBar } from '@/presentation/ui/components/StreakBar';
 import { TrackingCard } from '@/presentation/ui/components/TrackingCard';
 
 export default function Index() {
   return (
-    <View className="flex-1 relative bg-fill-back">
+    <ScreenContainer className="relative">
       <View>
-        <PageContainer className="relative bg-fill-back" noHeader>
+        <PageContainer className="relative" noHeader>
           <View className="absolute w-[110%] h-86 z-0 -top-20 -left-4 mx-auto bg-linear-180 from-60% to-150% from-primary to-primary-dark" />
           <LandingStackHeader lockedTheme="dark" />
           <PageHeader
@@ -102,6 +103,6 @@ export default function Index() {
           <TextButton text="Hello world" />
         </PageContainer>
       </View>
-    </View>
+    </ScreenContainer>
   );
 }

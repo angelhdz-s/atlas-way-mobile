@@ -1,13 +1,13 @@
-import { View } from 'react-native';
 import { PageContainer } from '@/presentation/modules/page/ui/components/PageContainer';
 import { PageHeader } from '@/presentation/modules/page/ui/components/PageHeader';
+import { ScreenContainer } from '@/presentation/ui/components/ScreenContainer';
 
 export default function Activity() {
   return (
-    <View className="flex-1 bg-fill-back">
+    <ScreenContainer>
       <PageContainer>
         <PageHeader title="Your Activity" description="Page description" />
       </PageContainer>
-    </View>
+    </ScreenContainer>
   );
 }
