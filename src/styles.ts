@@ -1,3 +1,5 @@
+import type { THEME_COLORS } from '@/style.types';
+
 /* Brand Colors */
 export const BRAND_COLORS = {
   primary: '#bd1e01',
@@ -13,7 +15,7 @@ export const FONTS = {
 } as const;
 
 /* Dark Theme Colors */
-export const DARK_THEME = {
+export const DARK_THEME: THEME_COLORS = {
   /* Background */
   fillBack: '#0a0a0a',
   fillBase: '#0e0e0e',
@@ -54,7 +56,7 @@ export const DARK_THEME = {
 } as const;
 
 /* Light Theme Colors */
-export const LIGHT_THEME = {
+export const LIGHT_THEME: THEME_COLORS = {
   /* Background */
   fillBack: '#f8f8ff',
   fillBase: '#fcfcff',
@@ -94,10 +96,7 @@ export const LIGHT_THEME = {
   focus: '#000',
 } as const;
 
-/* Theme Type for convenience */
-export type ColorScheme = typeof DARK_THEME | typeof LIGHT_THEME;
-
 /* Helper to get colors by theme */
-export const getThemeColors = (isDark: boolean): ColorScheme => {
+export const getThemeColors = (isDark: boolean): THEME_COLORS => {
   return isDark ? DARK_THEME : LIGHT_THEME;
 };
