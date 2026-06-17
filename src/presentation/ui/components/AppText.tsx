@@ -1,6 +1,6 @@
 import { AnimatedColorText } from '@/presentation/modules/animated/ui/components/AnimatedColorText';
 import { Text, type TextProps } from '@/presentation/ui/components/Text';
-import { DARK_THEME, LIGHT_THEME } from '@/styles';
+import { TEXT_DEFAULT_COLORS } from '@/presentation/utils/text.constants';
 import type { ThemeName } from 'uniwind';
 
 type Props = TextProps & {
@@ -13,10 +13,7 @@ type Props = TextProps & {
 
 export function AppText({
   lockedTheme,
-  colors = {
-    dark: DARK_THEME.fgDefault,
-    light: LIGHT_THEME.fgStrong,
-  },
+  colors = TEXT_DEFAULT_COLORS,
   children,
   ...restProps
 }: Props) {
