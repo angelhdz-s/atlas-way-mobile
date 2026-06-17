@@ -9,11 +9,13 @@ import {
 type Props = {
   color: string;
   duration?: number;
+  property?: 'color' | 'backgroundColor';
 };
 
 export function useColorTransition({
   color,
   duration = ANIMATED_DEFAULT_TRANSITION_DURATION,
+  property = 'color',
 }: Props) {
   const currentColor = useSharedValue(color);
 
@@ -24,7 +26,7 @@ export function useColorTransition({
 
   return useAnimatedStyle(() => {
     return {
-      color: withTiming(currentColor.value, {
+      [property]: withTiming(currentColor.value, {
         duration,
       }),
     };
