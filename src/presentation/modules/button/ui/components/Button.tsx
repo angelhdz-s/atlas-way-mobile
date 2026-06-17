@@ -1,5 +1,5 @@
-import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
 import type { GestureResponderEvent } from 'react-native';
+import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
 import { Easing, useSharedValue, withTiming } from 'react-native-reanimated';
 import { twMerge } from 'tailwind-merge';
 import { AnimatedButton } from '@/presentation/modules/animated/ui/components/AnimatedButton';

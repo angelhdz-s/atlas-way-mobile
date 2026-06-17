@@ -21,14 +21,14 @@ export function useColorTransition({
 
   useEffect(() => {
     if (currentColor.value === color) return;
-    currentColor.value = color;
-  }, [color, currentColor]);
+    currentColor.value = withTiming(color, {
+      duration,
+    });
+  }, [color, currentColor, duration]);
 
   return useAnimatedStyle(() => {
     return {
-      [property]: withTiming(currentColor.value, {
-        duration,
-      }),
+      [property]: currentColor.value,
     };
   });
 }

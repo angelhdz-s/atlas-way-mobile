@@ -1,5 +1,5 @@
-import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import type { RoutePath } from 'expo-router';
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import { Link } from 'expo-router';
 import { Pressable, View } from 'react-native';
 import { twMerge } from 'tailwind-merge';

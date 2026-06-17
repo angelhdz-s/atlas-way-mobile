@@ -1,5 +1,5 @@
-import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import type { BottomTabBarProps } from 'expo-router/build/react-navigation/bottom-tabs';
+import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 import {

@@ -1,5 +1,5 @@
-import type { TextProps } from '@/presentation/ui/components/Text';
 import type { ThemeName } from 'uniwind';
+import type { TextProps } from '@/presentation/ui/components/Text';
 import { AnimatedColorText } from '@/presentation/modules/animated/ui/components/AnimatedColorText';
 import { Text } from '@/presentation/ui/components/Text';
 import { TEXT_DEFAULT_COLORS } from '@/presentation/utils/text.constants';

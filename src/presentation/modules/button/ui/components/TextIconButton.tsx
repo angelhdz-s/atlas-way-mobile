@@ -1,7 +1,7 @@
+import type { ThemeName } from 'uniwind';
 import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
 import type { ButtonVariantProps } from '@/presentation/modules/button/ui/button.ui.variants';
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
-import type { ThemeName } from 'uniwind';
 import { View } from 'react-native';
 import { twMerge } from 'tailwind-merge';
 import { getButtonColors } from '@/presentation/modules/button/ui/button-color.ui.styles';

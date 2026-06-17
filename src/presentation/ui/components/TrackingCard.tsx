@@ -38,7 +38,7 @@ export function TrackingCard({ className }: Props) {
               Push, Pull, Legs
             </AppText>
             <AppText
-              className="text-lg leading-tight"
+              className="text-lg leading-tight text-fg-strong"
               font="FunnelDisplay Bold"
               lockedTheme="dark"
               colors={strongColors}

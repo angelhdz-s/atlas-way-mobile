@@ -19,7 +19,11 @@ export function PageHeader({
 }: Props) {
   return (
     <View className={twMerge('gap-1', className)}>
-      <PageHeaderTitle text={title} lockedTheme={lockedTheme} />
+      <PageHeaderTitle
+        text={title}
+        lockedTheme={lockedTheme}
+        className="text-fg-strong"
+      />
       {description && (
         <PageHeaderDescription text={description} lockedTheme={lockedTheme} />
       )}

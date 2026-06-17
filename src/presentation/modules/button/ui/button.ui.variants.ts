@@ -1,5 +1,5 @@
-import type { ButtonVariantsType } from '@/presentation/modules/button/ui/button.ui.types';
 import type { VariantProps } from 'tailwind-variants';
+import type { ButtonVariantsType } from '@/presentation/modules/button/ui/button.ui.types';
 import { tv } from 'tailwind-variants';
 import { BUTTON_DEFAULT_VARIANTS } from '@/presentation/modules/button/ui/button.ui.variants.constants';
 

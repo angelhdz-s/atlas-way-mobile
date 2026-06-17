@@ -1,8 +1,8 @@
+import type { ThemeName } from 'uniwind';
+import type { NonEmptyString } from '@/shared/shared.types';
 import type { ButtonProps } from '@/presentation/modules/button/ui/button.ui.types';
 import type { ButtonVariantProps } from '@/presentation/modules/button/ui/button.ui.variants';
 import type { IconType } from '@/presentation/modules/icon/ui/components/Icons';
-import type { NonEmptyString } from '@/shared/shared.types';
-import type { ThemeName } from 'uniwind';
 import { getButtonColors } from '@/presentation/modules/button/ui/button-color.ui.styles';
 import { getIconSize } from '@/presentation/modules/button/ui/button-icon.ui.variants';
 import { BUTTON_ICON_STROKE_WIDTH } from '@/presentation/modules/button/ui/button.ui.variants.constants';
